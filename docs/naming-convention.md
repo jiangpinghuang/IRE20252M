@@ -11,16 +11,17 @@ Consistent naming keeps papers, datasets, benchmarks, experiments, prompts, and 
 - **IRE-Knowledge**: The knowledge infrastructure for standards, cases, ontologies, retrieval, embeddings, and knowledge graphs.
 - **IRE-Evaluation**: The shared evaluation framework for metrics, scripts, result analysis, plots, and paper tables.
 
-## Repository Names
+## Directory Names
 
-Use lowercase kebab-case:
+Use the standardized repository directories:
 
-- `intelligent-requirements-engineering`
-- `chatreq`
-- `ire-bench`
-- `ire-datasets`
-- `ire-knowledge`
-- `ire-evaluation`
+- `docs`
+- `papers`
+- `benchmark`
+- `knowledge`
+- `system/chatreq`
+- `groups/G{number}-{short-module}`
+- `ai-resources`
 
 ## Dataset Names
 
@@ -97,13 +98,13 @@ Examples:
 
 Use:
 
-`ire-bench-{task}-{version}`
+`benchmark-{task}-{version}`
 
 Examples:
 
-- `ire-bench-clarification-v1`
-- `ire-bench-conflict-detection-v1`
-- `ire-bench-architecture-alignment-v1`
+- `benchmark-clarification-v1`
+- `benchmark-conflict-detection-v1`
+- `benchmark-architecture-alignment-v1`
 
 ## Prompts
 
@@ -116,4 +117,3 @@ Examples:
 - `prompt-analyst-clarification-v1.md`
 - `prompt-architect-feasibility-v1.md`
 - `prompt-reviewer-conflict-checking-v1.md`
-

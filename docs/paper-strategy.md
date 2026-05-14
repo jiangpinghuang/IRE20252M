@@ -4,9 +4,9 @@ IRE follows an ACM-first paper strategy. Conference papers should be written in 
 
 ## ACM SIGCONF First
 
-All conference-style papers should use the provided ACM template in `docs/acmart-primary/`. The reusable skeleton under `ire-papers/group-papers/template-paper/` references that template and preserves the ACM metadata structure.
+All conference-style papers should use the provided ACM template in `papers/templates/acmart-primary/`. The reusable skeleton under `papers/templates/group-paper/` references that template and preserves the ACM metadata structure.
 
-Do not create a separate LaTeX template from scratch. When the ACM template must be upgraded, upgrade `docs/acmart-primary/` deliberately and document the change.
+Do not create a separate LaTeX template from scratch. When the ACM template must be upgraded, upgrade `papers/templates/acmart-primary/` deliberately and document the change.
 
 ## ICSE/ASE/FSE Writing Style
 
@@ -47,7 +47,7 @@ Each subgroup paper should contribute a focused module to the master ChatREQ pap
 - G7 contributes requirement-to-architecture alignment.
 - G8 contributes executable requirements and task planning.
 
-The master TOSEM/TSE paper should integrate these modules into an end-to-end ChatREQ system with shared datasets, knowledge assets, benchmark tasks, and evaluation protocols.
+The master TOSEM/TSE paper should integrate these modules into an end-to-end ChatREQ system with shared datasets, knowledge assets, benchmark tasks, and evaluation protocols. Group paper drafts should live under the corresponding `groups/G*/paper/` directories.
 
 ## Reproducibility Expectations
 
@@ -78,4 +78,3 @@ Benchmark claims should specify:
 ## Evaluation Rigor
 
 IRE papers should avoid unsupported claims. Strong evaluations should combine automatic metrics, human review, qualitative error analysis, ablation studies, and downstream task utility when possible.
-

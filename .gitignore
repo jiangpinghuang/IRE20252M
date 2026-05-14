@@ -64,8 +64,8 @@ _minted*/
 *.ist
 *.loa
 
-# Keep source ACM template PDFs tracked if they are already part of docs.
-!docs/acmart-primary/**/*.pdf
+# Keep source ACM template PDFs tracked if they are already part of the paper templates.
+!papers/templates/acmart-primary/**/*.pdf
 
 # VSCode and editors
 .vscode/*

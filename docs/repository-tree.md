@@ -1,118 +1,105 @@
-# Repository Tree Overview
+# Repository Tree
 
-This overview records the intended top-level organization of the Intelligent Requirements Engineering workspace. The `docs/acmart-primary/` directory is preserved as the provided ACM template source and is intentionally not expanded here.
-
-```text
-.
-|-- README.md
-|-- LICENSE
-|-- CONTRIBUTING.md
-|-- CODE_OF_CONDUCT.md
-|-- .gitignore
-|-- docs/
-|   |-- vision.md
-|   |-- roadmap.md
-|   |-- naming-convention.md
-|   |-- research-assets.md
-|   |-- collaboration-workflow.md
-|   |-- paper-strategy.md
-|   |-- repository-tree.md
-|   `-- acmart-primary/
-|-- chatreq/
-|   |-- README.md
-|   |-- agents/
-|   |-- knowledge/
-|   |-- artifacts/
-|   |-- workflows/
-|   |-- evaluation/
-|   |-- datasets/
-|   |-- docs/
-|   |-- examples/
-|   |-- prompts/
-|   |-- configs/
-|   `-- tests/
-|-- ire-course/
-|   |-- README.md
-|   |-- syllabus/
-|   |-- slides/
-|   |-- group-tasks/
-|   |-- weekly-reports/
-|   |-- paper-templates/
-|   |-- codex-prompts/
-|   |-- project-guidelines/
-|   `-- final-reports/
-|-- ire-papers/
-|   |-- README.md
-|   |-- templates/
-|   |-- master-paper/
-|   |-- group-papers/
-|   |-- related-work/
-|   |-- figures/
-|   |-- tables/
-|   |-- algorithms/
-|   |-- refs/
-|   |-- writing-guidelines/
-|   `-- paper-assets/
-|-- ire-datasets/
-|   |-- README.md
-|   |-- raw/
-|   |-- processed/
-|   |-- annotation-guidelines/
-|   |-- schemas/
-|   |-- examples/
-|   |-- requirement-dialogues/
-|   |-- srs-documents/
-|   |-- requirement-graphs/
-|   |-- conflict-cases/
-|   `-- architecture-mappings/
-|-- ire-bench/
-|   |-- README.md
-|   |-- benchmark-tasks/
-|   |-- baselines/
-|   |-- metrics/
-|   |-- scripts/
-|   |-- configs/
-|   |-- evaluation-results/
-|   `-- latex-tables/
-|-- ire-knowledge/
-|   |-- README.md
-|   |-- standards/
-|   |-- srs-cases/
-|   |-- domain-knowledge/
-|   |-- knowledge-graph/
-|   |-- retrieval/
-|   |-- embeddings/
-|   |-- ontologies/
-|   `-- extraction-pipelines/
-`-- ire-evaluation/
-    |-- README.md
-    |-- metrics/
-    |-- scripts/
-    |-- experiment-configs/
-    |-- result-analysis/
-    |-- plots/
-    `-- latex-tables/
-```
-
-The reusable ACM group-paper skeleton is located at:
+本文件记录当前仓库的主要目录结构。为保持可读性，ACM 模板内部文件和各组空目录中的 `.gitkeep` 未展开。
 
 ```text
-ire-papers/group-papers/template-paper/
-|-- README.md
-|-- main.tex
-|-- sections/
-|   |-- introduction.tex
-|   |-- background.tex
-|   |-- method.tex
-|   |-- experiment.tex
-|   |-- results.tex
-|   |-- discussion.tex
-|   |-- related_work.tex
-|   `-- conclusion.tex
-|-- figures/
-|-- tables/
-|-- algorithms/
-`-- refs/
-    `-- references.bib
+IRE20252M/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── docs/
+│   ├── README.md
+│   ├── syllabus/
+│   │   └── README.md
+│   ├── slides/
+│   │   └── README.md
+│   ├── schedules/
+│   │   └── README.md
+│   ├── reading-list/
+│   │   └── README.md
+│   ├── templates/
+│   │   └── README.md
+│   ├── vision.md
+│   ├── roadmap.md
+│   ├── naming-convention.md
+│   ├── research-assets.md
+│   ├── collaboration-workflow.md
+│   ├── paper-strategy.md
+│   └── repository-tree.md
+├── papers/
+│   ├── README.md
+│   ├── templates/
+│   │   ├── README.md
+│   │   ├── acmart-primary/
+│   │   ├── group-paper/
+│   │   ├── course/
+│   │   ├── shared/
+│   │   └── writing-guidelines/
+│   ├── references/
+│   │   ├── README.md
+│   │   └── related-work/
+│   └── master-paper/
+│       ├── README.md
+│       ├── ChatREQ-TOSEM-outline.md
+│       ├── algorithms/
+│       ├── assets/
+│       ├── figures/
+│       └── tables/
+├── benchmark/
+│   ├── README.md
+│   ├── tasks/
+│   │   ├── README.md
+│   │   ├── configs/
+│   │   ├── datasets/
+│   │   └── experiment-configs/
+│   ├── metrics/
+│   │   └── README.md
+│   ├── baselines/
+│   │   └── README.md
+│   └── results/
+│       └── README.md
+├── knowledge/
+│   ├── README.md
+│   ├── standards/
+│   │   └── README.md
+│   ├── srs/
+│   │   └── README.md
+│   ├── papers/
+│   │   └── README.md
+│   ├── books/
+│   │   └── README.md
+│   ├── extraction/
+│   │   └── README.md
+│   └── misc/
+│       └── README.md
+├── system/
+│   ├── README.md
+│   └── chatreq/
+│       └── README.md
+├── groups/
+│   ├── README.md
+│   ├── G1-elicitation/
+│   ├── G2-environment/
+│   ├── G3-req-graph/
+│   ├── G4-conflict/
+│   ├── G5-hitl/
+│   ├── G6-feasibility/
+│   ├── G7-architecture/
+│   └── G8-executable/
+└── ai-resources/
+    ├── README.md
+    ├── prompts/
+    │   └── README.md
+    ├── workflows/
+    │   └── README.md
+    ├── guidelines/
+    │   └── README.md
+    ├── tutorials/
+    │   └── README.md
+    └── references/
+        └── README.md
 ```
 
+每个二级目录均包含 `README.md`。小组目录内部统一包含 `paper/`、`reports/`、`artifacts/`、`experiments/`、`datasets/`、`figures/`、`src/` 和 `notes/`。
