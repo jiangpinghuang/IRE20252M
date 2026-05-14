@@ -1,0 +1,113 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm/
+.pnpm-store/
+coverage/
+.next/
+.nuxt/
+vite.config.*.timestamp-*
+
+# LaTeX
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.dvi
+*.ps
+*.pdfsync
+_minted*/
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.loa
+
+# Keep source ACM template PDFs tracked if they are already part of docs.
+!docs/acmart-primary/**/*.pdf
+
+# VSCode and editors
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.swp
+*.swo
+*~
+
+# Local agent workspace metadata
+.agents/
+.codex/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.directory
+Trash-*/
+
+# Temporary experiment files
+tmp/
+temp/
+scratch/
+experiments/tmp/
+experiments/cache/
+results/tmp/
+outputs/tmp/
+*.tmp
+*.bak
+*.orig
+*.seed
+
+# Large local artifacts
+*.sqlite
+*.db
+*.parquet
+*.pkl
+*.joblib
+*.ckpt
+*.pt
+*.pth

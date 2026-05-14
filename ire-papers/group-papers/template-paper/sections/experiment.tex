@@ -1,0 +1,32 @@
+\section{Experimental Setup}
+
+This section should make the evaluation protocol precise and reproducible.
+
+\subsection{Datasets and Tasks}
+
+Describe the dataset source, version, schema, split, annotation process, and task definition. If the paper introduces a new benchmark task, define the input, output, quality criteria, and expected use.
+
+\subsection{Baselines}
+
+Include strong and relevant baselines. Typical IRE baselines include:
+
+\begin{itemize}
+  \item A single-prompt LLM baseline.
+  \item A retrieval-augmented single-agent baseline.
+  \item A rule-based or traditional NLP baseline where applicable.
+  \item A human-authored or expert-reviewed reference where available.
+  \item ChatREQ ablations that remove knowledge, agent critique, graph context, or human-in-the-loop control.
+\end{itemize}
+
+\subsection{Metrics}
+
+Define task-specific metrics such as completeness, consistency, conflict detection precision and recall, traceability quality, feasibility accuracy, human effort, and downstream utility.
+
+\subsection{Ablations}
+
+Plan ablations that test the contribution of knowledge sources, agent roles, retrieval, graph reasoning, human review policies, and workflow stages.
+
+\subsection{Reproducibility}
+
+Report the code version, dataset version, prompt version, knowledge base version, model configuration, random seeds where applicable, and scripts used to generate results.
+
