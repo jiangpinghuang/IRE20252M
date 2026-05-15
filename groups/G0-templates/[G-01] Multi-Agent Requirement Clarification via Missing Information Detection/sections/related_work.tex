@@ -1,0 +1,22 @@
+\section{Related Work}
+\label{related_work}
+
+\subsection{Traditional Requirement Elicitation}
+Traditional requirement elicitation relies on interviews, workshops, scenarios, questionnaires, and document analysis to externalize stakeholder needs.
+These techniques provide rich human context but depend heavily on analyst expertise and may miss implicit domain assumptions.
+
+\subsection{Requirement Clarification}
+Requirement clarification addresses incomplete, vague, or ambiguous stakeholder statements through follow-up questions and iterative refinement.
+This paper treats clarification as a focused elicitation activity rather than a downstream specification or implementation task.
+
+\subsection{LLM-Based Requirement Elicitation}
+LLMs can support elicitation by summarizing stakeholder input, proposing requirement candidates, and generating follow-up questions.
+The key limitation is that generated questions may be generic, weakly connected to missing information, or unsupported by explicit requirement knowledge.
+
+\subsection{Multi-Agent Collaboration}
+Multi-agent collaboration assigns elicitation responsibilities to specialized roles.
+In this paper, collaboration is used narrowly for requirement clarification: one agent conducts the interview, one simulates or represents end-user perspectives, and one analyzes requirement quality during the dialogue.
+
+\subsection{Human-in-the-Loop Requirement Engineering}
+Human-in-the-loop requirement engineering keeps stakeholders and analysts responsible for validating questions, answers, and clarified requirement statements.
+This line of work motivates interactive clarification workflows in which AI agents assist elicitation without replacing stakeholder judgment.

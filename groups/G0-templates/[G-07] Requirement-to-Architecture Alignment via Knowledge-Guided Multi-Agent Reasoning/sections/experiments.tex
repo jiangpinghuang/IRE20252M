@@ -1,0 +1,69 @@
+\section{Experiments}
+\label{experiments}
+
+\subsection{Research Questions}
+\label{sec:exp-rqs}
+
+The evaluation is organized around the following research questions:
+\begin{itemize}[leftmargin=*]
+  \item RQ1: How accurately does the workflow align natural-language requirements with architectural elements?
+  \item RQ2: How complete and useful are the generated requirement-to-architecture trace links?
+  \item RQ3: How much do architecture knowledge and agent review contribute to mapping quality?
+  \item RQ4: How do human reviewers assess the usefulness of the alignment artifacts?
+\end{itemize}
+
+\subsection{Experimental Setup}
+\label{sec:exp-setup}
+
+This subsection will describe the implementation setting, agent roles, knowledge sources, prompting protocol, human review procedure, and evaluation process.
+It should report configuration details without overstating tool generality.
+
+\subsection{Datasets}
+\label{sec:exp-datasets}
+
+The dataset should contain requirement documents paired with reference or expert-reviewed architectural artifacts.
+The paper should describe project domains, requirement counts, artifact types, and annotation procedures once the dataset is finalized.
+
+\subsection{Baselines}
+\label{sec:exp-baselines}
+
+Baselines should reflect requirement-to-architecture mapping alternatives, such as direct single-agent mapping, LLM-only mapping without architecture knowledge, and mapping without reviewer feedback.
+
+\subsection{Evaluation Metrics}
+\label{sec:exp-metrics}
+
+\subsubsection{Architecture Alignment Accuracy}
+\label{sec:exp-alignment-accuracy}
+
+Measures whether generated architectural elements and constraints match reference or expert-accepted mappings.
+
+\subsubsection{Requirement Traceability Quality}
+\label{sec:exp-traceability-quality}
+
+Measures the correctness, usefulness, and evidence support of requirement-to-architecture trace links.
+
+\subsubsection{Mapping Completeness}
+\label{sec:exp-mapping-completeness}
+
+Measures whether architecturally significant requirements are covered by components, responsibilities, constraints, or trace links.
+
+\subsubsection{Architecture Consistency}
+\label{sec:exp-architecture-consistency}
+
+Measures whether the produced architecture mapping avoids unsupported decisions, responsibility conflicts, and constraint violations.
+
+\subsection{Main Results}
+\label{sec:exp-main-results}
+
+This subsection will report quantitative and qualitative findings after the evaluation is conducted.
+No result claims should be added before experimental evidence is available.
+
+\subsection{Ablation Study}
+\label{sec:exp-ablation}
+
+The ablation study should isolate the contribution of architecture knowledge, role-separated agents, reviewer checks, and human feedback.
+
+\subsection{Case Study}
+\label{sec:exp-case-study}
+
+The case study should illustrate one requirement-to-architecture mapping workflow, including requirement evidence, architectural concerns, mapped components, constraints, and reviewer feedback.

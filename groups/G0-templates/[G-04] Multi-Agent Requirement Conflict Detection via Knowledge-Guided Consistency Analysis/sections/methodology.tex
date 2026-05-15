@@ -1,0 +1,89 @@
+\section{Methodology}
+\label{methodology}
+
+\subsection{Framework Overview}
+The proposed method treats requirement conflict detection as a consistency
+verification workflow. Given a set of natural language requirements, the workflow
+extracts candidate constraints, compares them against requirement knowledge, detects
+potential conflicts, generates explanations, and requests human refinement when
+automated evidence is insufficient.
+
+\subsection{Multi-Agent Conflict Analysis Workflow}
+
+\subsubsection{Analyst Agent}
+The Analyst Agent decomposes each requirement into intent, actors, actions,
+conditions, constraints, and expected outcomes. It also groups requirements that are
+likely to interact.
+
+\subsubsection{Validator Agent}
+The Validator Agent checks the candidate interactions against consistency criteria,
+constraint rules, and known semantic conflict patterns. It produces conflict
+candidates with supporting evidence.
+
+\subsubsection{Reviewer Agent}
+The Reviewer Agent examines whether a reported conflict is sufficiently grounded,
+whether the explanation is understandable, and whether the case should be sent to a
+human stakeholder for refinement.
+
+\subsection{Requirement Conflict Identification}
+
+\subsubsection{Functional Conflict}
+Functional conflicts occur when two requirements prescribe incompatible system
+behaviors for the same condition, input, actor, or business goal.
+
+\subsubsection{Constraint Conflict}
+Constraint conflicts occur when non-functional or business constraints cannot be
+satisfied together, such as mutually incompatible limits on time, access, resource
+usage, or policy compliance.
+
+\subsubsection{Role Conflict}
+Role conflicts occur when requirements assign inconsistent permissions,
+responsibilities, or restrictions to the same stakeholder role or to interacting
+roles.
+
+\subsubsection{Temporal Conflict}
+Temporal conflicts occur when requirements impose incompatible ordering, timing,
+state transition, or lifecycle constraints.
+
+\subsection{Knowledge-Guided Consistency Analysis}
+
+\subsubsection{Requirement Knowledge}
+Requirement knowledge captures domain concepts, stakeholder roles, requirement
+attributes, and consistency criteria that are needed to interpret natural language
+requirements.
+
+\subsubsection{Constraint Rules}
+Constraint rules encode checkable consistency conditions, such as mutually exclusive
+permissions, incompatible numeric bounds, mandatory ordering, and dependency
+constraints.
+
+\subsubsection{Semantic Patterns}
+Patterns capture common conflicts, including negation, exception, role permission,
+and condition outcome mismatches.
+
+\subsubsection{Prompt Strategies}
+Prompt strategies guide each agent to produce structured evidence rather than
+ungrounded judgments. Prompts should require conflict type, involved requirements,
+consistency rule, explanation, confidence, and suggested human review action.
+
+\subsection{Requirement Verification and Refinement}
+
+\subsubsection{Conflict Detection}
+The workflow detects candidate conflicts by comparing requirement pairs or groups
+under the selected knowledge and constraint rules.
+
+\subsubsection{Conflict Explanation}
+Each reported conflict should include the conflicting requirement statements, the
+violated consistency criterion, and a concise natural language explanation.
+
+\subsubsection{Conflict Resolution Suggestions}
+The method may suggest refinement directions, such as relaxing a constraint,
+clarifying an actor, adding an exception condition, or splitting a requirement.
+Suggestions are treated as decision support rather than automatic requirement
+rewriting.
+
+\subsection{Human-in-the-Loop Interaction}
+Human-in-the-loop interaction is used when the agents cannot determine whether a
+case is a true conflict or an acceptable domain-specific exception. Human feedback is
+used to confirm conflicts, reject false positives, and refine the knowledge or
+constraint rules used in later verification.

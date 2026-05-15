@@ -1,0 +1,52 @@
+\section{Experiments}
+\label{experiments}
+
+\subsection{Research Questions}
+\label{subsec:exp-rqs}
+The evaluation is organized around the effectiveness of the interactive requirement refinement workflow:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{RQ1:} Does human-in-the-loop multi-agent refinement improve requirement quality compared with non-interactive requirement drafting?
+  \item \textbf{RQ2:} Does structured user feedback improve requirement controllability during iterative refinement?
+  \item \textbf{RQ3:} How much do knowledge-assisted refinement mechanisms contribute to refinement effectiveness?
+  \item \textbf{RQ4:} How do users perceive the interaction cost, transparency, and usefulness of the workflow?
+\end{itemize}
+
+\subsection{Experimental Setup}
+\label{subsec:exp-setup}
+This subsection will describe the study protocol, participant roles, task procedure, interaction budget, model configuration, and refinement iteration limit. The setup should keep the evaluation focused on requirement refinement rather than later software engineering activities.
+
+\subsection{Datasets}
+\label{subsec:exp-datasets}
+The dataset should contain requirement drafts or stakeholder scenarios that require clarification, constraint adjustment, and iterative revision. Each item should include the initial requirement context, user feedback opportunities, and reference criteria for evaluation.
+
+\subsection{Baselines}
+\label{subsec:exp-baselines}
+Baselines should represent reasonable alternatives for requirement refinement:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Single-pass LLM:} produces a refined requirement without interaction.
+  \item \textbf{Single-agent interactive refinement:} uses user feedback but no role-based agent collaboration.
+  \item \textbf{Multi-agent without knowledge assistance:} uses the agent workflow without refinement templates or feedback patterns.
+\end{itemize}
+
+\subsection{Evaluation Metrics}
+\label{subsec:exp-metrics}
+The evaluation will measure both artifact quality and interaction quality:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Requirement Quality:} clarity, completeness, consistency, testability, and readability.
+  \item \textbf{User Satisfaction:} perceived usefulness, transparency, and confidence in the refined requirement.
+  \item \textbf{Requirement Controllability:} ability to preserve intent, direct edits, manage constraints, and inspect revision rationale.
+  \item \textbf{Refinement Effectiveness:} improvement between initial and final requirement versions.
+  \item \textbf{Human Effort Reduction:} number of interaction turns, editing time, and perceived workload.
+\end{itemize}
+
+\subsection{Main Results}
+\label{subsec:exp-results}
+This subsection will report quantitative and qualitative findings after the experiment is conducted. No result values are assumed in the current paper skeleton.
+
+\subsection{Ablation Study}
+\label{subsec:exp-ablation}
+The ablation study will isolate the contribution of the Human Feedback Loop, Reviewer Agent, and knowledge-assisted refinement components.
+
+\subsection{Case Study}
+\label{subsec:exp-case-study}
+The case study will trace one requirement refinement session from initial draft to final revision, emphasizing user interventions, agent suggestions, accepted changes, rejected changes, and revision rationale.

@@ -1,0 +1,111 @@
+\section{Methodology}
+\label{methodology}
+
+\subsection{Framework Overview}
+\label{sec:method-overview}
+
+The proposed method transforms a natural language requirement into an executable requirement representation.
+The workflow contains four stages: requirement semantic analysis, knowledge-guided task transformation, execution-flow construction, and human review.
+The output is a structured plan that links each requirement element to tasks, actions, constraints, and dependencies.
+
+\subsection{Multi-Agent Task Planning Workflow}
+\label{sec:method-agents}
+
+\subsubsection{Analyst Agent}
+\label{sec:method-analyst}
+
+The analyst agent identifies the functional intent, relevant entities, constraints, and observable behaviors expressed in the requirement.
+Its output is a semantic summary used by later planning steps.
+
+\subsubsection{Planning Agent}
+\label{sec:method-planning-agent}
+
+The planning agent decomposes the analyzed requirement into candidate tasks and orders them according to dependency and constraint information.
+It is responsible for constructing an action sequence that can be inspected and executed by an intelligent system.
+
+\subsubsection{Execution Agent}
+\label{sec:method-execution-agent}
+
+The execution agent checks whether the task workflow is complete.
+It inspects whether the plan contains actionable steps, inputs, outputs, and dependencies.
+
+\subsection{Requirement Semantic Analysis}
+\label{sec:method-semantic}
+
+\subsubsection{Functional Intent}
+\label{sec:method-intent}
+
+Functional intent captures the capability or behavior expected by the requirement.
+It defines the goal that the task workflow must preserve.
+
+\subsubsection{Constraints}
+\label{sec:method-constraints}
+
+Constraints capture conditions that restrict task execution, including input conditions, business rules, quality constraints, and stakeholder-specified limitations.
+
+\subsubsection{Action Semantics}
+\label{sec:method-action-semantics}
+
+Action semantics identify the operations implied by the requirement, such as collecting information, validating conditions, updating state, notifying users, or producing outputs.
+
+\subsubsection{Execution Dependencies}
+\label{sec:method-dependencies}
+
+Execution dependencies describe ordering relations among tasks and actions.
+They help prevent plans that satisfy isolated actions but fail as complete workflows.
+
+\subsection{Knowledge-Guided Task Transformation}
+\label{sec:method-knowledge}
+
+\subsubsection{Requirement Knowledge}
+\label{sec:method-req-knowledge}
+
+Requirement knowledge provides domain concepts, common requirement types, and terminology used to interpret stakeholder statements.
+
+\subsubsection{Task Templates}
+\label{sec:method-task-templates}
+
+Task templates define reusable structures for common executable requirement patterns, such as input validation, authorization checks, notification workflows, and state transitions.
+
+\subsubsection{Planning Rules}
+\label{sec:method-planning-rules}
+
+Planning rules constrain task decomposition and ordering.
+They specify when tasks require preconditions, postconditions, dependency checks, or human confirmation.
+
+\subsubsection{Prompt Strategies}
+\label{sec:method-prompts}
+
+Prompt strategies guide the agents to produce structured intermediate artifacts instead of unconstrained natural language summaries.
+Prompts are designed around intent extraction, action identification, dependency reasoning, and plan consistency checking.
+
+\subsection{Executable Requirement Construction}
+\label{sec:method-construction}
+
+\subsubsection{Task Decomposition}
+\label{sec:method-task-decomposition}
+
+The method decomposes each requirement into a set of tasks that are specific enough to be inspected, assigned, or executed by an intelligent agent.
+
+\subsubsection{Action Sequence Generation}
+\label{sec:method-action-sequence}
+
+Tasks are ordered into an action sequence that reflects preconditions, data dependencies, and expected outputs.
+
+\subsubsection{Requirement-to-Task Mapping}
+\label{sec:method-mapping}
+
+Each task is linked back to the requirement fragment that justifies it.
+This mapping supports traceability between stakeholder intent and executable behavior.
+
+\subsubsection{Execution Flow Construction}
+\label{sec:method-flow}
+
+The final representation organizes tasks, actions, constraints, and dependencies into an execution flow.
+The flow is intended for planning and inspection, not for deployment-level execution.
+
+\subsection{Human-in-the-Loop Interaction}
+\label{sec:method-hitl}
+
+Human reviewers inspect ambiguous mappings, missing constraints, and inconsistent task orderings.
+Their feedback is used to revise the executable requirement representation before evaluation.

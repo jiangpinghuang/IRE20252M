@@ -1,0 +1,78 @@
+\section{Experiments}
+\label{experiments}
+
+\subsection{Research Questions}
+\label{exp:rqs}
+
+The evaluation is organized around the following research questions:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{RQ1:} How accurately does the workflow detect infeasible or conditionally feasible requirements?
+  \item \textbf{RQ2:} How accurately does it identify the underlying constraint category?
+  \item \textbf{RQ3:} How much do knowledge guidance and multi-agent role separation contribute to the results?
+  \item \textbf{RQ4:} How much human verification effort can be reduced without removing human decision authority?
+\end{itemize}
+
+\subsection{Experimental Setup}
+\label{exp:setup}
+
+The experimental setup will define the input requirement format, available project knowledge, agent prompts, constraint rule sources, and human annotation protocol.
+All implementation details should be reported sufficiently for reproduction.
+
+\subsection{Datasets}
+\label{exp:datasets}
+
+The dataset should contain natural language requirements annotated with feasibility labels and constraint categories.
+Candidate sources include course project requirements, public requirements engineering artifacts, and manually constructed infeasible variants.
+The final paper should report dataset size, domains, annotation guidelines, and inter-annotator agreement.
+
+\subsection{Baselines}
+\label{exp:baselines}
+
+Baselines should compare the proposed workflow against simpler feasibility review strategies:
+\begin{itemize}[leftmargin=*]
+  \item Single-agent requirement feasibility review.
+  \item Rule-only constraint checker.
+  \item Multi-agent review without knowledge guidance.
+  \item Human-only review used as the reference process.
+\end{itemize}
+
+\subsection{Evaluation Metrics}
+\label{exp:metrics}
+
+\subsubsection{Feasibility Detection Accuracy}
+\label{exp:metric_feasibility}
+
+Measures whether the workflow correctly classifies requirements as feasible, conditionally feasible, infeasible, or insufficient information.
+
+\subsubsection{Constraint Verification Accuracy}
+\label{exp:metric_constraint}
+
+Measures whether the identified constraint category matches the human-annotated reason for feasibility risk.
+
+\subsubsection{Unrealistic Requirement Detection}
+\label{exp:metric_unrealistic}
+
+Measures precision, recall, and F1 for requirements judged unrealistic under the available project context.
+
+\subsubsection{Human Verification Reduction}
+\label{exp:metric_human}
+
+Measures the reduction in manual review effort, such as fewer requirements requiring full expert inspection or fewer clarification rounds.
+
+\subsection{Main Results}
+\label{exp:main_results}
+
+This subsection will report the main quantitative comparison after the dataset and baselines are finalized.
+No experimental results are claimed at the structure-design stage.
+
+\subsection{Ablation Study}
+\label{exp:ablation}
+
+The ablation study should isolate the effect of role separation, knowledge guidance, constraint rules, and human feedback.
+The expected output is an evidence-based explanation of which components improve feasibility verification.
+
+\subsection{Case Study}
+\label{exp:case_study}
+
+The case study should present a small number of representative requirements, agent findings, human judgments, and final refinements.
+It should illustrate the feasibility analysis workflow without overgeneralizing from anecdotal examples.

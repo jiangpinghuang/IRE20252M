@@ -1,0 +1,103 @@
+\documentclass[sigconf,anonymous,review]{acmart}
+
+%% ---------------------------------------------------
+%% Basic settings
+%% ---------------------------------------------------
+
+\AtBeginDocument{%
+  \providecommand\BibTeX{{Bib\TeX}}}
+
+%% Hide ACM reference format and copyright block in review mode
+\settopmatter{printacmref=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+%% Optional: remove conference reference line at bottom
+\pagestyle{plain}
+
+%% ---------------------------------------------------
+%% Packages
+%% ---------------------------------------------------
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{url}
+
+%% ---------------------------------------------------
+%% Metadata
+%% ---------------------------------------------------
+
+\title{Interactive Multi-Agent Requirement Refinement with Human-in-the-Loop}
+
+\author{Anonymous Author(s)}
+
+\affiliation{
+  \institution{Anonymous Institution}
+  \country{Anonymous Country}
+}
+
+\renewcommand{\shortauthors}{Anonymous Author(s)}
+
+%% ---------------------------------------------------
+%% Abstract
+%% ---------------------------------------------------
+
+\begin{document}
+
+\begin{abstract}
+Large language models can quickly draft software requirements, but the resulting requirements are often difficult for stakeholders to control, revise, and evolve. This paper studies human-in-the-loop multi-agent requirement refinement as an interactive requirements engineering problem. The proposed structure focuses on a workflow in which specialized agents elicit, analyze, and review requirements while human feedback and requirement knowledge guide iterative revision. The planned evaluation examines requirement quality, controllability, refinement effectiveness, user satisfaction, and human effort while keeping the study limited to requirement refinement.
+\end{abstract}
+
+\keywords{
+large language models,
+multi-agent systems,
+human-in-the-loop,
+requirements engineering,
+requirement refinement,
+interactive requirement engineering
+}
+
+%% ---------------------------------------------------
+%% Make title
+%% ---------------------------------------------------
+
+\maketitle
+
+%% ===================================================
+%% Main Sections
+%% ===================================================
+
+\input{sections/introduction}
+
+\input{sections/related_work}
+
+\input{sections/methodology}
+
+\input{sections/experiments}
+
+\input{sections/threats}
+
+\input{sections/conclusion}
+
+%% ===================================================
+%% Bibliography
+%% ===================================================
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+%% ===================================================
+%% Appendix
+%% ===================================================
+
+\appendix
+
+\input{sections/appendix}
+
+%% ===================================================
+
+\end{document}

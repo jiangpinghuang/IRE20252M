@@ -1,0 +1,106 @@
+\documentclass[sigconf,anonymous,review]{acmart}
+
+%% ---------------------------------------------------
+%% Basic settings
+%% ---------------------------------------------------
+
+\AtBeginDocument{%
+  \providecommand\BibTeX{{Bib\TeX}}}
+
+%% Hide ACM reference format and copyright block in review mode
+\settopmatter{printacmref=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+%% Optional: remove conference reference line at bottom
+\pagestyle{plain}
+
+%% ---------------------------------------------------
+%% Packages
+%% ---------------------------------------------------
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{url}
+
+%% ---------------------------------------------------
+%% Metadata
+%% ---------------------------------------------------
+
+\title{Multi-Agent Requirement Clarification via Missing Information Detection}
+
+\author{Anonymous Author(s)}
+
+\affiliation{
+  \institution{Anonymous Institution}
+  \country{Anonymous Country}
+}
+
+\renewcommand{\shortauthors}{Anonymous Author(s)}
+
+%% ---------------------------------------------------
+%% Abstract
+%% ---------------------------------------------------
+
+\begin{document}
+
+\begin{abstract}
+Natural language requirements often omit essential information and contain ambiguity during elicitation.
+This paper studies multi-agent requirement clarification via missing information detection.
+The proposed research framework coordinates interviewer, end-user, and analyst agents to detect missing functional, constraint, role, data, and exception information, then uses knowledge-guided clarification templates to ask targeted follow-up questions.
+The study is scoped to G1-elicitation and evaluates whether this workflow improves requirement completeness, missing information coverage, clarification effectiveness, and human effort.
+\end{abstract}
+
+\keywords{
+requirement elicitation,
+requirement clarification,
+missing information detection,
+multi-agent collaboration,
+knowledge-guided analysis,
+human-in-the-loop
+}
+
+%% ---------------------------------------------------
+%% Make title
+%% ---------------------------------------------------
+
+\maketitle
+
+%% ===================================================
+%% Main Sections
+%% ===================================================
+
+\input{sections/introduction}
+
+\input{sections/related_work}
+
+\input{sections/methodology}
+
+\input{sections/experiments}
+
+\input{sections/threats}
+
+\input{sections/conclusion}
+
+%% ===================================================
+%% Bibliography
+%% ===================================================
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+%% ===================================================
+%% Appendix
+%% ===================================================
+
+\appendix
+
+\input{sections/appendix}
+
+%% ===================================================
+
+\end{document}

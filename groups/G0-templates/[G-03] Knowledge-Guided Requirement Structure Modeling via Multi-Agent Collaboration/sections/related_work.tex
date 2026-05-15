@@ -1,0 +1,37 @@
+\section{Related Work}
+\label{related_work}
+
+\subsection{Traditional Requirement Modeling}
+\label{sec:rw-traditional}
+
+Traditional requirements engineering has developed modeling notations, templates, and controlled languages to reduce ambiguity and improve stakeholder communication.
+Controlled Natural Language approaches show that structured expression can improve analyzability while preserving readability~\cite{darifControlledNaturalLanguage2026}.
+Our work follows this motivation but focuses on automatically constructing structured representations from informal natural-language requirements.
+
+\subsection{Requirement Representation and Requirement Graphs}
+\label{sec:rw-representation}
+
+Requirement representation research studies how requirement elements and their relations can be made explicit.
+Graph-based representations are useful because they expose entities, dependencies, conditions, and semantic links in a form that can be inspected and analyzed.
+This paper treats the requirement graph as the central artifact of requirement structure modeling.
+
+\subsection{LLM-based Requirement Analysis}
+\label{sec:rw-llm-requirements}
+
+LLM-based methods have been used to summarize, extract, and organize requirement-related artifacts.
+These methods demonstrate the value of making requirements explicit before using them in later engineering stages.
+However, fluent generated text does not by itself provide a stable representation for analysis, comparison, or human review.
+
+\subsection{Knowledge-Guided Requirement Modeling}
+\label{sec:rw-knowledge}
+
+Knowledge-guided modeling uses domain vocabulary, requirement templates, semantic patterns, and modeling constraints to guide requirement interpretation.
+Such knowledge can reduce uncontrolled variation in extracted structures and help align agent outputs with requirements engineering concepts.
+This paper uses knowledge as guidance for representation construction rather than as a separate reasoning system.
+
+\subsection{Multi-Agent Collaboration}
+\label{sec:rw-multi-agent}
+
+Multi-agent collaboration decomposes complex analysis work into roles with different responsibilities.
+For requirement structure modeling, role separation can help distinguish stakeholder-oriented elicitation, semantic decomposition, and graph construction.
+This paper investigates a focused three-role workflow instead of a broad multi-agent software engineering platform.

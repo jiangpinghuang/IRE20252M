@@ -1,0 +1,107 @@
+\documentclass[sigconf,anonymous,review]{acmart}
+
+%% ---------------------------------------------------
+%% Basic settings
+%% ---------------------------------------------------
+
+\AtBeginDocument{%
+  \providecommand\BibTeX{{Bib\TeX}}}
+
+%% Hide ACM reference format and copyright block in review mode
+\settopmatter{printacmref=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+%% Optional: remove conference reference line at bottom
+\pagestyle{plain}
+
+%% ---------------------------------------------------
+%% Packages
+%% ---------------------------------------------------
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{url}
+
+%% ---------------------------------------------------
+%% Metadata
+%% ---------------------------------------------------
+
+\title{Knowledge-Guided Requirement Feasibility Analysis via Multi-Agent Reasoning}
+% \subtitle{Requirement Realism Verification for Intelligent Requirements Engineering}
+
+\author{Anonymous Author(s)}
+
+\affiliation{
+  \institution{Anonymous Institution}
+  \country{Anonymous Country}
+}
+
+\renewcommand{\shortauthors}{Anonymous Author(s)}
+
+%% ---------------------------------------------------
+%% Abstract
+%% ---------------------------------------------------
+
+\begin{document}
+
+\begin{abstract}
+Natural language requirements often contain unrealistic goals, infeasible constraints, and implicit assumptions about resources, performance, and deployment environments.
+This paper studies requirement feasibility as a first-class requirements engineering problem.
+We propose a research framework for knowledge-guided feasibility analysis in which multiple specialized agents inspect candidate requirements, reason over constraint categories, and surface unrealistic or underspecified assumptions for human validation.
+The paper is structured around requirement realism verification rather than system construction: it defines the target problem, outlines a multi-agent verification workflow, and specifies an evaluation plan for measuring feasibility detection, constraint verification, and human review reduction.
+\end{abstract}
+
+\keywords{
+requirements engineering,
+requirement feasibility,
+requirement validation,
+constraint reasoning,
+multi-agent reasoning,
+human-in-the-loop
+}
+
+%% ---------------------------------------------------
+%% Make title
+%% ---------------------------------------------------
+
+\maketitle
+
+%% ===================================================
+%% Main Sections
+%% ===================================================
+
+\input{sections/introduction}
+
+\input{sections/related_work}
+
+\input{sections/methodology}
+
+\input{sections/experiments}
+
+\input{sections/threats}
+
+\input{sections/conclusion}
+
+%% ===================================================
+%% Bibliography
+%% ===================================================
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+%% ===================================================
+%% Appendix
+%% ===================================================
+
+\appendix
+
+\input{sections/appendix}
+
+%% ===================================================
+
+\end{document}

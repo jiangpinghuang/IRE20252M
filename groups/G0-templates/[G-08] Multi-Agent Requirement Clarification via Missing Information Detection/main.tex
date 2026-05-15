@@ -1,0 +1,107 @@
+\documentclass[sigconf,anonymous,review]{acmart}
+
+%% ---------------------------------------------------
+%% Basic settings
+%% ---------------------------------------------------
+
+\AtBeginDocument{%
+  \providecommand\BibTeX{{Bib\TeX}}}
+
+%% Hide ACM reference format and copyright block in review mode
+\settopmatter{printacmref=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+%% Optional: remove conference reference line at bottom
+\pagestyle{plain}
+
+%% ---------------------------------------------------
+%% Packages
+%% ---------------------------------------------------
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{url}
+
+%% ---------------------------------------------------
+%% Metadata
+%% ---------------------------------------------------
+
+\title[Executable Requirements via Knowledge-Guided Multi-Agent Planning]%
+{Executable Requirements via Knowledge-Guided Multi-Agent Planning}
+
+\author{Anonymous Author(s)}
+
+\affiliation{
+  \institution{Anonymous Institution}
+  \country{Anonymous Country}
+}
+
+\renewcommand{\shortauthors}{Anonymous Author(s)}
+
+%% ---------------------------------------------------
+%% Abstract
+%% ---------------------------------------------------
+
+\begin{document}
+
+\begin{abstract}
+Natural language requirements are readable for stakeholders but are often difficult to execute directly because they lack explicit action semantics, behavioral mappings, and task-level dependencies.
+This paper studies the problem of transforming natural language requirements into executable task workflows for intelligent software systems.
+We outline a knowledge-guided multi-agent planning approach that analyzes requirement intent, constraints, actions, and execution dependencies, then constructs an actionable requirement representation through task decomposition, sequence generation, and human review.
+The proposed study is evaluated around task generation accuracy, execution completeness, requirement-to-task alignment, and planning consistency.
+\end{abstract}
+
+\keywords{
+requirements engineering,
+executable requirements,
+requirement-to-task transformation,
+multi-agent planning,
+task planning,
+human-in-the-loop
+}
+
+%% ---------------------------------------------------
+%% Make title
+%% ---------------------------------------------------
+
+\maketitle
+
+%% ===================================================
+%% Main Sections
+%% ===================================================
+
+\input{sections/introduction}
+
+\input{sections/related_work}
+
+\input{sections/methodology}
+
+\input{sections/experiments}
+
+\input{sections/threats}
+
+\input{sections/conclusion}
+
+%% ===================================================
+%% Bibliography
+%% ===================================================
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+%% ===================================================
+%% Appendix
+%% ===================================================
+
+\appendix
+
+\input{sections/appendix}
+
+%% ===================================================
+
+\end{document}

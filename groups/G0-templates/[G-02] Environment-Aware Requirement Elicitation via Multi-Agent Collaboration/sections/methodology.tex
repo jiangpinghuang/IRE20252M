@@ -1,0 +1,107 @@
+\section{Methodology}
+\label{methodology}
+
+This section defines the proposed environment-aware elicitation workflow.
+The method is intentionally lightweight: it uses role-based agent collaboration, environmental knowledge, and targeted human clarification to improve requirement context completeness.
+
+\subsection{Framework Overview}
+\label{method:overview}
+
+The framework takes initial natural language requirements as input and produces context-enriched requirements plus a record of clarified environmental assumptions.
+Its scope is limited to eliciting and completing environmental context.
+
+\subsection{Multi-Agent Environment-Aware Workflow}
+\label{method:workflow}
+
+The workflow coordinates three analysis roles.
+
+\subsubsection{Interviewer Agent}
+\label{method:interviewer_agent}
+
+The interviewer agent guides the elicitation dialogue, detects vague stakeholder statements, and decides when a clarification question should be raised.
+
+\subsubsection{End-User Agent}
+\label{method:end_user_agent}
+
+The end-user agent examines requirements from the perspective of concrete user situations, including user goals, locations, interaction conditions, and task constraints.
+
+\subsubsection{Environment Agent}
+\label{method:environment_agent}
+
+This agent identifies missing assumptions about deployment settings, devices, runtime conditions, connectivity, and operational constraints.
+
+\subsection{Environment Information Detection}
+\label{method:environment_detection}
+
+This step checks whether each requirement contains enough environmental context for later analysis and implementation discussion.
+
+\subsubsection{Deployment Environment}
+\label{method:deployment_environment}
+
+The workflow identifies assumptions about physical, organizational, network, and platform deployment settings.
+
+\subsubsection{Device Constraints}
+\label{method:device_constraints}
+
+The workflow checks whether device type, interface capability, sensing availability, battery, performance, and accessibility constraints are specified when relevant.
+
+\subsubsection{Runtime Conditions}
+\label{method:runtime_conditions}
+
+The workflow detects missing assumptions about connectivity, latency, workload, environmental changes, availability, and failure conditions.
+
+\subsubsection{User Context Information}
+\label{method:user_context}
+
+The workflow captures user roles, usage scenarios, location, activity state, attention level, and interaction constraints.
+
+\subsection{Knowledge-Assisted Context Understanding}
+\label{method:knowledge_assisted}
+
+Environmental knowledge is used to guide what context should be checked and what clarification questions should be asked.
+
+\subsubsection{Environment Knowledge}
+\label{method:environment_knowledge}
+
+The method uses domain-relevant environment knowledge to identify likely deployment and runtime assumptions.
+
+\subsubsection{Context Templates}
+\label{method:context_templates}
+
+Context templates define recurring fields such as deployment setting, device, user situation, runtime condition, and operational constraint.
+
+\subsubsection{Scenario Patterns}
+\label{method:scenario_patterns}
+
+Scenario patterns help map vague requirements to concrete usage situations without introducing unrelated functionality.
+
+\subsubsection{Prompt Strategies}
+\label{method:prompt_strategies}
+
+Prompt strategies constrain agents to ask environment-focused questions and to report uncertainty rather than invent missing context.
+
+\subsection{Dynamic Environment Clarification}
+\label{method:clarification}
+
+Clarification is triggered when the workflow detects environmental gaps that materially affect requirement interpretation.
+
+\subsubsection{Missing Environment Information}
+\label{method:missing_environment}
+
+The method records which environmental fields are absent, ambiguous, or inconsistent with the stated user scenario.
+
+\subsubsection{Context Completion}
+\label{method:context_completion}
+
+The workflow updates requirements with stakeholder-confirmed context and separates confirmed assumptions from inferred assumptions.
+
+\subsubsection{Scenario Refinement}
+\label{method:scenario_refinement}
+
+The workflow refines scenarios by linking requirements to concrete deployment, device, runtime, and user-context conditions.
+
+\subsection{Human-in-the-Loop Interaction}
+\label{method:hitl}
+
+Human stakeholders review clarification questions and confirm or correct proposed environmental assumptions.
+The interaction is designed to improve context completeness while keeping the clarification burden manageable.

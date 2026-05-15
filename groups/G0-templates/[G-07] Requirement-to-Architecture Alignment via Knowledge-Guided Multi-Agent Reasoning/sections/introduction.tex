@@ -1,0 +1,33 @@
+\section{Introduction}
+\label{introduction}
+
+\subsection{Background and Motivation}
+\label{sec:intro-background}
+
+Natural-language requirements are the main interface between stakeholder intent and software design.
+However, requirements are often written without explicit architectural assumptions, component responsibilities, quality-attribute trade-offs, or design constraints.
+This gap makes it difficult for intelligent software systems to move from requirement understanding to architecture-aware design decisions.
+Recent requirements engineering research has also emphasized the central role of requirements in intelligent software development~\cite{robinsonRequirementsAreAll2025} and the persistent difficulty of writing precise yet stakeholder-readable requirement specifications~\cite{darifControlledNaturalLanguage2026}.
+
+\subsection{Challenges of Requirement-to-Architecture Alignment}
+\label{sec:intro-challenges}
+
+This paper focuses on the requirement-to-architecture alignment problem.
+The key challenges are: identifying architectural concerns from informal requirements, mapping requirements to components and responsibilities, aligning quality attributes with architecture constraints, and preserving traceability between requirement statements and design decisions.
+
+\subsection{Multi-Agent Architecture Reasoning}
+\label{sec:intro-multi-agent}
+
+We investigate a lightweight multi-agent reasoning workflow for architecture-aware requirements engineering.
+The workflow separates semantic requirement analysis, architecture reasoning, and review-oriented consistency checking, while keeping human feedback in the loop for ambiguous or high-impact mapping decisions.
+
+\subsection{Contributions}
+\label{sec:intro-contributions}
+
+The paper is structured around the following research contributions:
+\begin{itemize}[leftmargin=*]
+  \item A clear formulation of requirement-to-architecture alignment for intelligent software systems.
+  \item A knowledge-guided multi-agent workflow for extracting architectural concerns and constructing requirement-to-architecture mappings.
+  \item A traceability-oriented mapping method covering component identification, responsibility allocation, and architecture constraint alignment.
+  \item An empirical evaluation plan for assessing alignment accuracy, mapping completeness, traceability quality, and architecture consistency.
+\end{itemize}

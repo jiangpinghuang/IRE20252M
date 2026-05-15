@@ -1,0 +1,35 @@
+\section{Related Work}
+\label{related_work}
+
+\subsection{Executable Requirements}
+\label{sec:rw-executable}
+
+Executable requirements aim to reduce the gap between human-readable requirement statements and machine-actionable behavior.
+Controlled natural language and requirement patterns improve precision while preserving readability~\cite{darifControlledNaturalLanguage2026}.
+However, such specifications do not always provide task sequences or execution dependencies for intelligent agents.
+
+\subsection{Requirement-to-Task Transformation}
+\label{sec:rw-req-task}
+
+Requirement-to-task transformation studies how requirement statements can be converted into concrete development, validation, or operational tasks.
+For this paper, the relevant concern is the production of task-level actions that preserve the original requirement intent.
+
+\subsection{Task Planning for Actionable AI Systems}
+\label{sec:rw-task-planning}
+
+Task planning provides mechanisms for decomposing goals into ordered actions and checking whether a plan can satisfy a target objective.
+In intelligent software systems, planning is useful when a requirement must be operationalized as a workflow rather than kept as a static textual artifact.
+
+\subsection{LLM-based Requirement Engineering}
+\label{sec:rw-llm-re}
+
+LLM-based methods have been used to extract, refine, and generate software requirements.
+Requirement-aware generation has shown that explicitly modeling requirements can improve downstream software artifacts~\cite{hanArchCodeIncorporatingSoftware2024}.
+This paper focuses on a narrower question: how generated or stakeholder-written requirements can be transformed into executable task workflows.
+
+\subsection{Multi-Agent Collaboration}
+\label{sec:rw-multi-agent}
+
+Multi-agent collaboration can separate analysis responsibilities across specialized roles.
+For executable requirements, this separation supports independent semantic analysis, planning, and execution-flow inspection.
+The proposed work uses multi-agent collaboration as a task-planning mechanism, not as a general-purpose platform architecture.

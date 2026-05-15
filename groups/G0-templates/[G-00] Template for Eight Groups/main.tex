@@ -1,0 +1,110 @@
+\documentclass[sigconf,anonymous,review]{acmart}
+
+%% ---------------------------------------------------
+%% Basic settings
+%% ---------------------------------------------------
+
+\AtBeginDocument{%
+  \providecommand\BibTeX{{Bib\TeX}}}
+
+%% Hide ACM reference format and copyright block in review mode
+\settopmatter{printacmref=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+%% Optional: remove conference reference line at bottom
+\pagestyle{plain}
+
+%% ---------------------------------------------------
+%% Packages
+%% ---------------------------------------------------
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{url}
+
+%% ---------------------------------------------------
+%% Metadata
+%% ---------------------------------------------------
+
+\title{Your Paper Title}
+
+\author{Anonymous Author(s)}
+
+\affiliation{
+  \institution{Anonymous Institution}
+  \country{Anonymous Country}
+}
+
+\renewcommand{\shortauthors}{Anonymous Author(s)}
+
+%% ---------------------------------------------------
+%% Abstract
+%% ---------------------------------------------------
+
+\begin{document}
+
+\begin{abstract}
+Your abstract here.
+\end{abstract}
+
+\keywords{
+large language models,
+multi-agent systems,
+software engineering,
+debugging,
+requirements engineering
+}
+
+%% ---------------------------------------------------
+%% Make title
+%% ---------------------------------------------------
+
+\maketitle
+
+%% ===================================================
+%% Main Sections
+%% ===================================================
+
+\input{sections/introduction}
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{figures/sampleteaser.pdf}
+  \caption{A sample figure.}
+  \Description{A description of the sample figure for accessibility.}
+  \label{fig:sample}
+\end{figure}
+
+
+\input{sections/related_work}
+
+\input{sections/methodology}
+
+\input{sections/experiments}
+
+\input{sections/threats}
+
+\input{sections/conclusion}
+
+%% ===================================================
+%% Bibliography
+%% ===================================================
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+%% ===================================================
+%% Appendix
+%% ===================================================
+
+\appendix
+
+\input{sections/appendix}
+
+%% ===================================================
+
+\end{document}

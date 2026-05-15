@@ -1,0 +1,103 @@
+\section{Methodology}
+\label{methodology}
+
+\subsection{Framework Overview}
+\label{method:overview}
+
+The proposed framework verifies the feasibility of natural language requirements before downstream development activities.
+Given a requirement statement and available project knowledge, the workflow produces a feasibility judgment, supporting constraint evidence, detected realism issues, and suggested requirement refinements.
+
+\paragraph{Scope.}
+This study focuses only on G6-feasibility: requirement feasibility analysis and realism verification.
+It does not address requirement graph construction, conflict detection, architecture mapping, executable requirements, requirement planning, or dynamic requirement clarification.
+
+\subsection{Multi-Agent Feasibility Analysis Workflow}
+\label{method:workflow}
+
+\subsubsection{Analyst Agent}
+\label{method:analyst_agent}
+
+The analyst agent normalizes the input requirement, identifies the intended capability, and extracts feasibility-relevant assumptions.
+Its output is a structured requirement interpretation used by the downstream verification agents.
+
+\subsubsection{Constraint Verification Agent}
+\label{method:constraint_agent}
+
+The constraint verification agent checks whether the requirement contains explicit or implicit constraints that may exceed project limits.
+It focuses on constraint categories rather than broad requirement quality issues.
+
+\subsubsection{Deployment and Resource Agent}
+\label{method:deployment_agent}
+
+The deployment and resource agent inspects operational assumptions such as infrastructure availability, runtime environment, data access, hardware limits, and staffing or budget constraints.
+It reports whether the requirement appears deployable under the available context.
+
+\subsection{Requirement Feasibility Detection}
+\label{method:detection}
+
+\subsubsection{Resource Constraints}
+\label{method:resource_constraints}
+
+Resource constraints include budget, staffing, hardware capacity, data availability, and external service dependencies.
+
+\subsubsection{Performance Constraints}
+\label{method:performance_constraints}
+
+Performance constraints include latency, throughput, scalability, reliability, and accuracy targets that may be unrealistic for the stated system context.
+
+\subsubsection{Deployment Constraints}
+\label{method:deployment_constraints}
+
+Deployment constraints include platform compatibility, network availability, privacy restrictions, operating environments, and integration conditions.
+
+\subsubsection{Temporal Constraints}
+\label{method:temporal_constraints}
+
+Temporal constraints include deadlines, real-time behavior, release schedules, and maintenance windows that may conflict with implementation feasibility.
+
+\subsection{Knowledge-Guided Constraint Analysis}
+\label{method:knowledge}
+
+\subsubsection{Requirement Knowledge}
+\label{method:requirement_knowledge}
+
+Requirement knowledge includes domain terms, stakeholder assumptions, requirement templates, and known feasibility risks.
+
+\subsubsection{Constraint Rules}
+\label{method:constraint_rules}
+
+Constraint rules encode feasibility checks such as resource budget limits, deployment prerequisites, and incompatible constraint combinations.
+
+\subsubsection{Domain Knowledge}
+\label{method:domain_knowledge}
+
+Domain knowledge provides contextual evidence for judging whether a requirement is realistic in a target application domain.
+
+\subsubsection{Prompt Strategies}
+\label{method:prompt_strategies}
+
+Prompt strategies guide agents to provide structured judgments, constraint evidence, uncertainty labels, and refinement suggestions.
+
+\subsection{Requirement Verification and Refinement}
+\label{method:verification_refinement}
+
+\subsubsection{Feasibility Verification}
+\label{method:feasibility_verification}
+
+The final feasibility decision aggregates agent findings into labels such as feasible, conditionally feasible, infeasible, or insufficient information.
+
+\subsubsection{Unrealistic Requirement Detection}
+\label{method:unrealistic_detection}
+
+Unrealistic requirements are flagged when stated goals conflict with known constraints, require unavailable resources, or assume unsupported deployment conditions.
+
+\subsubsection{Requirement Adjustment Suggestions}
+\label{method:adjustment}
+
+For infeasible or conditionally feasible requirements, the workflow suggests conservative refinements such as relaxing targets, adding missing assumptions, or replacing unverifiable claims with measurable constraints.
+
+\subsection{Human-in-the-Loop Interaction}
+\label{method:hitl}
+
+Human reviewers inspect the agents' feasibility judgments, confirm domain assumptions, and decide whether suggested refinements should be accepted.
+The human-in-the-loop step is designed to reduce review effort while preserving stakeholder authority over requirement decisions.

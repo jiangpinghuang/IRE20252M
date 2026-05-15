@@ -1,0 +1,27 @@
+\section{Introduction}
+\label{introduction}
+
+\subsection{Background and Motivation}
+Requirement elicitation determines whether stakeholder goals, domain constraints, and operational assumptions are captured before requirements are formalized.
+In intelligent requirements engineering, requirements increasingly become the interface through which stakeholders communicate intent to AI-supported tools~\cite{robinsonRequirementsAreAll2025}.
+However, initial natural-language requirements are frequently partial, informal, and context-dependent.
+
+\subsection{Challenges of Requirement Clarification}
+LLM-based elicitation can generate fluent requirement statements, but fluency does not guarantee completeness or clarity.
+Initial stakeholder inputs may omit actors, data objects, exception cases, quality constraints, or business rules.
+Static requirement generation is especially limited because it may rewrite vague input instead of asking targeted follow-up questions.
+Prior work on controlled natural language also shows that reducing ambiguity while preserving stakeholder readability remains challenging~\cite{darifControlledNaturalLanguage2026}.
+
+\subsection{Multi-Agent Requirement Clarification}
+This paper focuses on multi-agent requirement clarification via missing information detection.
+The central idea is to use specialized agents to identify incomplete requirement elements, generate dynamic clarification questions, and keep human stakeholders responsible for approving elicitation decisions.
+Knowledge-assisted analysis guides the agents toward functional, constraint, role, data, and exception gaps.
+
+\subsection{Contributions}
+The paper is organized around the following contributions:
+\begin{itemize}[leftmargin=*]
+  \item A research-problem-driven workflow for multi-agent requirement clarification in G1-elicitation.
+  \item A missing-information detection scheme covering functional, constraint, role, data, and exception information.
+  \item A knowledge-assisted clarification method that uses requirement knowledge, templates, and prompt strategies for dynamic follow-up.
+  \item An experimental design for evaluating requirement completeness, missing-information coverage, clarification effectiveness, and human effort.
+\end{itemize}

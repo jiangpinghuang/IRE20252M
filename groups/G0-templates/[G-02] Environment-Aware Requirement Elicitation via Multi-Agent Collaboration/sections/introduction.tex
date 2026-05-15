@@ -1,0 +1,41 @@
+\section{Introduction}
+\label{introduction}
+
+Natural language requirements are often written around intended functionality, while the environment in which the software will be deployed remains implicit.
+Missing information about devices, runtime conditions, user situations, and deployment assumptions can lead to incomplete or misleading requirements.
+This paper frames environment-aware requirement elicitation as a research problem in intelligent requirements engineering.
+
+\subsection{Background and Motivation}
+\label{intro:background}
+
+Environment-aware requirement engineering aims to capture not only what a system should do, but also where, under which conditions, and for whom it should operate.
+This subsection motivates the need to elicit environmental context early, before requirements are refined into downstream artifacts.
+Recent work has also emphasized requirements as a central interface for future software engineering workflows~\cite{robinsonRequirementsAreAll2025}.
+
+\subsection{Challenges of Environment-Aware Requirement Elicitation}
+\label{intro:challenges}
+
+The paper focuses on four recurring challenges:
+\begin{itemize}[leftmargin=*]
+  \item natural language requirements often omit deployment and operational assumptions;
+  \item stakeholders may describe user goals without specifying devices, locations, connectivity, or runtime constraints;
+  \item static requirement generation cannot reliably infer environment-specific needs;
+  \item elicitation tools need to ask targeted clarification questions without overburdening human stakeholders.
+\end{itemize}
+
+\subsection{Multi-Agent Context Understanding}
+\label{intro:multi_agent_context}
+
+We investigate whether a lightweight multi-agent workflow can improve context understanding during elicitation.
+The key idea is to separate stakeholder interviewing, end-user perspective simulation, and environment/deployment analysis while keeping the workflow centered on missing environmental information.
+
+\subsection{Contributions}
+\label{intro:contributions}
+
+The intended contributions are:
+\begin{itemize}[leftmargin=*]
+  \item a research problem formulation for environment-aware requirement elicitation;
+  \item a multi-agent workflow for detecting missing environmental context;
+  \item a knowledge-assisted context understanding method for scenario refinement;
+  \item an empirical evaluation plan based on context completeness, environment consistency, requirement completeness, and clarification effectiveness.
+\end{itemize}

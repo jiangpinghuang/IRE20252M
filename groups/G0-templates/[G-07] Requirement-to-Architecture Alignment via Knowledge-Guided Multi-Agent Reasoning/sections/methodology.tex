@@ -1,0 +1,112 @@
+\section{Methodology}
+\label{methodology}
+
+\subsection{Framework Overview}
+\label{sec:method-overview}
+
+The proposed method takes natural-language requirements as input and produces an architecture-aware alignment artifact.
+The artifact contains architectural concerns, candidate components, responsibility assignments, architecture constraints, and trace links from requirements to architectural decisions.
+
+\subsection{Multi-Agent Architecture Alignment Workflow}
+\label{sec:method-workflow}
+
+The workflow uses three coordinated roles rather than a large agent hierarchy.
+Each role operates on the same requirement set and exchanges structured intermediate artifacts for review.
+
+\subsubsection{Analyst Agent}
+\label{sec:method-analyst-agent}
+
+The analyst agent extracts functional requirements, quality attributes, constraints, domain terms, and architecturally significant concerns from natural-language requirements.
+
+\subsubsection{Architecture Agent}
+\label{sec:method-architecture-agent}
+
+The architecture agent proposes candidate components, connectors, responsibilities, and design constraints based on the extracted architectural concerns and the available architecture knowledge.
+
+\subsubsection{Reviewer Agent}
+\label{sec:method-reviewer-agent}
+
+The reviewer agent checks whether the proposed mapping is complete, consistent, and traceable.
+It identifies unmapped requirements, weak responsibility assignments, and architecture decisions that lack requirement evidence.
+
+\subsection{Requirement Semantic Analysis}
+\label{sec:method-semantic-analysis}
+
+This step structures requirements into architecture-relevant categories.
+
+\subsubsection{Functional Requirements}
+\label{sec:method-functional-requirements}
+
+Functional requirements are analyzed to identify system capabilities, user-facing behaviors, and candidate responsibilities.
+
+\subsubsection{Constraints}
+\label{sec:method-constraints}
+
+Constraints are extracted as limitations on technology, integration, compliance, deployment, data handling, or operational behavior.
+
+\subsubsection{Quality Attributes}
+\label{sec:method-quality-attributes}
+
+Quality attributes such as performance, availability, scalability, maintainability, security, and usability are represented as architecture-driving concerns.
+
+\subsubsection{Architectural Concerns}
+\label{sec:method-architectural-concerns}
+
+Architectural concerns summarize the design implications that should influence component boundaries, communication patterns, and architecture constraints.
+
+\subsection{Knowledge-Guided Architecture Reasoning}
+\label{sec:method-knowledge}
+
+Architecture reasoning is guided by reusable knowledge rather than relying only on free-form generation.
+
+\subsubsection{Architecture Knowledge}
+\label{sec:method-architecture-knowledge}
+
+The knowledge source contains architecture concepts, common component types, connector semantics, quality-attribute tactics, and design-decision criteria.
+
+\subsubsection{Design Patterns}
+\label{sec:method-design-patterns}
+
+Design patterns are used as reasoning aids when requirements imply recurring responsibility structures or interaction styles.
+
+\subsubsection{Architecture Templates}
+\label{sec:method-architecture-templates}
+
+Architecture templates provide lightweight reference structures for common system families and help standardize mapping outputs.
+
+\subsubsection{Prompt Strategies}
+\label{sec:method-prompt-strategies}
+
+Prompt strategies constrain the agents to produce structured mappings, cite requirement evidence, and separate assumptions from supported architecture decisions.
+
+\subsection{Requirement-to-Architecture Mapping}
+\label{sec:method-mapping}
+
+This step is the central output of the method.
+It links requirement-level evidence to architectural elements and design constraints.
+
+\subsubsection{Component Identification}
+\label{sec:method-component-identification}
+
+Candidate components are identified from functional responsibilities, domain concepts, external actors, data ownership, and quality-attribute drivers.
+
+\subsubsection{Responsibility Allocation}
+\label{sec:method-responsibility-allocation}
+
+Responsibilities are assigned to components with explicit references to the requirement statements that justify each assignment.
+
+\subsubsection{Architecture Constraint Alignment}
+\label{sec:method-constraint-alignment}
+
+Architecture constraints are checked against extracted requirement constraints and quality attributes to reduce requirement-design inconsistency.
+
+\subsubsection{Traceability Construction}
+\label{sec:method-traceability}
+
+Trace links connect requirements, architectural concerns, components, responsibilities, constraints, and reviewer comments.
+
+\subsection{Human-in-the-Loop Interaction}
+\label{sec:method-hitl}
+
+Human reviewers validate ambiguous mappings, approve assumptions with architectural impact, and revise agent outputs when requirement evidence is insufficient.
+The interaction is limited to requirement-to-architecture alignment decisions.

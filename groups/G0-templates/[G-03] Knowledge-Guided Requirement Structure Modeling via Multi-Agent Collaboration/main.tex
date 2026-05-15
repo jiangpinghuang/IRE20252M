@@ -1,0 +1,106 @@
+\documentclass[sigconf,anonymous,review]{acmart}
+
+%% ---------------------------------------------------
+%% Basic settings
+%% ---------------------------------------------------
+
+\AtBeginDocument{%
+  \providecommand\BibTeX{{Bib\TeX}}}
+
+%% Hide ACM reference format and copyright block in review mode
+\settopmatter{printacmref=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+%% Optional: remove conference reference line at bottom
+\pagestyle{plain}
+
+%% ---------------------------------------------------
+%% Packages
+%% ---------------------------------------------------
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{url}
+
+%% ---------------------------------------------------
+%% Metadata
+%% ---------------------------------------------------
+
+\title[Knowledge-Guided Requirement Structure Modeling]{Knowledge-Guided Requirement Structure Modeling via Multi-Agent Collaboration}
+
+\author{Anonymous Author(s)}
+
+\affiliation{
+  \institution{Anonymous Institution}
+  \country{Anonymous Country}
+}
+
+\renewcommand{\shortauthors}{Anonymous Author(s)}
+
+%% ---------------------------------------------------
+%% Abstract
+%% ---------------------------------------------------
+
+\begin{document}
+
+\begin{abstract}
+Natural-language requirements are often loosely structured, semantically mixed, and difficult to analyze in a uniform representation.
+This paper studies the problem of requirement structure modeling: how to transform informal requirement statements into structured, analyzable, and extensible requirement representations.
+We outline a knowledge-guided multi-agent workflow that decomposes requirement semantics, constructs a requirement graph, and incorporates human feedback for representation refinement.
+The paper is positioned as a research-problem-driven study for intelligent requirements engineering, with evaluation centered on structure completeness, semantic consistency, graph quality, and representation accuracy.
+\end{abstract}
+
+\keywords{
+requirements engineering,
+requirement structure modeling,
+requirement graph,
+structured requirement representation,
+multi-agent collaboration,
+knowledge-guided modeling
+}
+
+%% ---------------------------------------------------
+%% Make title
+%% ---------------------------------------------------
+
+\maketitle
+
+%% ===================================================
+%% Main Sections
+%% ===================================================
+
+\input{sections/introduction}
+
+\input{sections/related_work}
+
+\input{sections/methodology}
+
+\input{sections/experiments}
+
+\input{sections/threats}
+
+\input{sections/conclusion}
+
+%% ===================================================
+%% Bibliography
+%% ===================================================
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+%% ===================================================
+%% Appendix
+%% ===================================================
+
+\appendix
+
+\input{sections/appendix}
+
+%% ===================================================
+
+\end{document}

@@ -1,0 +1,78 @@
+\section{Experiments}
+\label{experiments}
+
+\subsection{Research Questions}
+\label{sec:exp-rq}
+
+The evaluation is organized around the following research questions:
+\begin{description}[leftmargin=*,style=nextline]
+  \item[RQ1] How accurately can the approach transform natural language requirements into executable tasks?
+  \item[RQ2] Does knowledge guidance improve alignment and execution completeness?
+  \item[RQ3] Does multi-agent task planning improve planning consistency compared with simpler transformation baselines?
+  \item[RQ4] How does human review affect the quality of the final executable requirement representation?
+\end{description}
+
+\subsection{Experimental Setup}
+\label{sec:exp-setup}
+
+The experiment evaluates the complete requirement-to-task workflow.
+For each requirement, the approach produces semantic analysis artifacts, task decompositions, action sequences, requirement-to-task mappings, and execution flows.
+All outputs are compared against manually inspected reference artifacts or expert judgments.
+
+\subsection{Datasets}
+\label{sec:exp-datasets}
+
+The dataset should contain natural language requirements from course project specifications or representative intelligent software system scenarios.
+Each requirement should be annotated with expected task units, action semantics, and dependency information.
+This section will report dataset sources, selection criteria, annotation protocol, and basic statistics once the dataset is finalized.
+
+\subsection{Baselines}
+\label{sec:exp-baselines}
+
+The planned baselines are:
+\begin{itemize}[leftmargin=*]
+  \item Direct prompting that asks an LLM to produce tasks from a requirement in a single step.
+  \item A single-agent planner without role separation.
+  \item A template-only transformation method without knowledge-guided reasoning.
+  \item A variant without human review.
+\end{itemize}
+
+\subsection{Evaluation Metrics}
+\label{sec:exp-metrics}
+
+\subsubsection{Task Generation Accuracy}
+\label{sec:metric-accuracy}
+
+Task generation accuracy measures whether generated tasks correspond to valid actions implied by the original requirement.
+
+\subsubsection{Execution Completeness}
+\label{sec:metric-completeness}
+
+Execution completeness measures whether the task workflow covers the necessary steps, inputs, outputs, and dependencies required to operationalize the requirement.
+
+\subsubsection{Requirement-to-Task Alignment}
+\label{sec:metric-alignment}
+
+Requirement-to-task alignment measures whether each generated task can be traced to a specific requirement fragment without introducing unsupported behavior.
+
+\subsubsection{Plan Consistency}
+\label{sec:metric-consistency}
+
+Plan consistency measures whether the action sequence respects dependency order, constraints, and expected flow.
+
+\subsection{Main Results}
+\label{sec:exp-results}
+
+This subsection will report quantitative and qualitative results for the research questions.
+No synthetic performance numbers are included in this structure draft.
+
+\subsection{Ablation Study}
+\label{sec:exp-ablation}
+
+The ablation study will evaluate the contribution of knowledge guidance, agent role separation, planning rules, task templates, and human review.
+Each ablation removes one component while keeping the remaining workflow unchanged.
+
+\subsection{Case Study}
+\label{sec:exp-case}
+
+The case study will show one representative requirement and trace its transformation into semantic elements, tasks, action sequences, requirement-to-task mappings, and an execution flow.

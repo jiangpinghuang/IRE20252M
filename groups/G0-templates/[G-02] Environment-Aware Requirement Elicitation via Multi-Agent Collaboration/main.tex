@@ -1,0 +1,109 @@
+\documentclass[sigconf,anonymous,review]{acmart}
+
+%% ---------------------------------------------------
+%% Basic settings
+%% ---------------------------------------------------
+
+\AtBeginDocument{%
+  \providecommand\BibTeX{{Bib\TeX}}}
+
+%% Hide ACM reference format and copyright block in review mode
+\settopmatter{printacmref=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+%% Optional: remove conference reference line at bottom
+\pagestyle{plain}
+
+%% ---------------------------------------------------
+%% Packages
+%% ---------------------------------------------------
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{url}
+
+%% ---------------------------------------------------
+%% Metadata
+%% ---------------------------------------------------
+
+\title{Environment-Aware Requirement Elicitation via Multi-Agent Collaboration}
+% \subtitle{Knowledge-Assisted Context Understanding for Intelligent Requirements Engineering}
+
+\author{Anonymous Author(s)}
+
+\affiliation{
+  \institution{Anonymous Institution}
+  \country{Anonymous Country}
+}
+
+\renewcommand{\shortauthors}{Anonymous Author(s)}
+
+%% ---------------------------------------------------
+%% Abstract
+%% ---------------------------------------------------
+
+\begin{document}
+
+\begin{abstract}
+Natural language requirements often describe expected functionality while leaving deployment environments, device constraints, runtime conditions, and user scenarios implicit.
+This paper studies how multi-agent collaboration and knowledge-assisted context understanding can improve environment-aware requirement elicitation.
+The planned approach focuses on a lightweight elicitation workflow in which agents identify missing environmental assumptions, refine scenario context, and involve human stakeholders when clarification is needed.
+The evaluation is organized around context completeness, environment consistency, requirement completeness, and clarification effectiveness.
+\end{abstract}
+
+\ccsdesc[500]{Software and its engineering~Requirements analysis}
+\ccsdesc[300]{Computing methodologies~Multi-agent systems}
+
+\keywords{
+requirements engineering,
+elicitation,
+environment awareness,
+context understanding,
+multi-agent collaboration
+}
+
+%% ---------------------------------------------------
+%% Make title
+%% ---------------------------------------------------
+
+\maketitle
+
+%% ===================================================
+%% Main Sections
+%% ===================================================
+
+\input{sections/introduction}
+
+\input{sections/related_work}
+
+\input{sections/methodology}
+
+\input{sections/experiments}
+
+\input{sections/threats}
+
+\input{sections/conclusion}
+
+%% ===================================================
+%% Bibliography
+%% ===================================================
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+%% ===================================================
+%% Appendix
+%% ===================================================
+
+\appendix
+
+\input{sections/appendix}
+
+%% ===================================================
+
+\end{document}

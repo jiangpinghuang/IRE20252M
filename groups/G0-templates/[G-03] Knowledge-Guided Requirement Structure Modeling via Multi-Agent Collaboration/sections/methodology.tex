@@ -1,0 +1,105 @@
+\section{Methodology}
+\label{methodology}
+
+\subsection{Framework Overview}
+\label{sec:method-overview}
+
+Given a set of natural-language requirements $R=\{r_1,\ldots,r_n\}$, the goal is to construct a structured requirement representation $G=(V,E,A)$.
+Nodes $V$ represent requirement elements, edges $E$ represent semantic relations, and attributes $A$ store textual evidence, type labels, confidence, and human revision status.
+The framework contains three stages: multi-agent parsing, knowledge-guided structure modeling, and human-in-the-loop refinement.
+
+\subsection{Multi-Agent Requirement Parsing Workflow}
+\label{sec:method-workflow}
+
+\subsubsection{Interviewer Agent}
+\label{sec:method-interviewer}
+
+The interviewer agent rewrites stakeholder-facing requirement text into candidate requirement statements and records unresolved assumptions.
+Its output is a cleaned requirement list rather than a final model.
+
+\subsubsection{Analyst Agent}
+\label{sec:method-analyst}
+
+The analyst agent decomposes each candidate requirement into semantic units, including functions, constraints, roles, data elements, and exception information.
+It also links each extracted unit back to textual evidence.
+
+\subsubsection{Structure Modeling Agent}
+\label{sec:method-structure-agent}
+
+The structure modeling agent maps decomposed semantic units into the requirement graph.
+It normalizes element types, constructs relations, and prepares the representation for human inspection.
+
+\subsection{Requirement Semantic Decomposition}
+\label{sec:method-decomposition}
+
+\subsubsection{Functional Requirements}
+\label{sec:method-functional}
+
+Functional requirements describe intended system behaviors, services, or responses to user actions.
+
+\subsubsection{Constraints}
+\label{sec:method-constraints}
+
+Constraints capture non-behavioral conditions that restrict how a function should operate, such as quality expectations, policy limits, or operational conditions.
+
+\subsubsection{Roles}
+\label{sec:method-roles}
+
+Roles identify stakeholders, users, external systems, or organizational actors involved in a requirement.
+
+\subsubsection{Data Elements}
+\label{sec:method-data}
+
+Data elements represent objects, records, attributes, and information items manipulated or referenced by a requirement.
+
+\subsubsection{Exception Information}
+\label{sec:method-exceptions}
+
+Exception information captures alternative conditions, error cases, missing inputs, or boundary situations stated in the requirement text.
+
+\subsection{Knowledge-Guided Structure Modeling}
+\label{sec:method-knowledge}
+
+\subsubsection{Requirement Knowledge}
+\label{sec:method-req-knowledge}
+
+Requirement knowledge includes domain vocabulary, requirement categories, expected element types, and common relation types.
+
+\subsubsection{Structure Templates}
+\label{sec:method-templates}
+
+Structure templates define the expected schema for decomposed requirement elements and graph relations.
+
+\subsubsection{Semantic Patterns}
+\label{sec:method-patterns}
+
+Semantic patterns guide the interpretation of common requirement forms, such as actor-action-object statements and condition-trigger-response statements.
+
+\subsubsection{Prompt Strategies}
+\label{sec:method-prompts}
+
+Prompt strategies constrain agent outputs to typed fields, evidence links, and graph construction rules.
+
+\subsection{Requirement Graph Construction}
+\label{sec:method-graph}
+
+\subsubsection{Entity Extraction}
+\label{sec:method-entity}
+
+Entity extraction identifies requirement elements and assigns each element a type, source requirement, and evidence span.
+
+\subsubsection{Relation Construction}
+\label{sec:method-relation}
+
+Relation construction connects entities through typed links such as performs, uses, constrains, triggers, and handles.
+
+\subsubsection{Structured Representation}
+\label{sec:method-structured-representation}
+
+The final representation stores the requirement graph in a structured format that can be inspected, compared, and extended in later requirements engineering activities.
+
+\subsection{Human-in-the-Loop Refinement}
+\label{sec:method-hitl}
+
+Human reviewers inspect uncertain nodes, ambiguous relations, and unsupported decompositions.
+Their edits are recorded as revisions to the graph rather than as unstructured comments, keeping the representation analyzable after refinement.

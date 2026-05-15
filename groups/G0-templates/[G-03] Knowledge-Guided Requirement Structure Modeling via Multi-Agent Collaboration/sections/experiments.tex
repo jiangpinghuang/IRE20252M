@@ -1,0 +1,72 @@
+\section{Experiments}
+\label{experiments}
+
+\subsection{Research Questions}
+\label{sec:exp-rqs}
+
+The evaluation is designed around the following research questions:
+\begin{enumerate}[leftmargin=*]
+  \item RQ1: How completely does the workflow recover requirement elements from natural-language requirements?
+  \item RQ2: How consistently does the workflow preserve requirement semantics in the structured representation?
+  \item RQ3: How does knowledge guidance affect graph quality and representation accuracy?
+  \item RQ4: How does human-in-the-loop refinement change the final requirement graph?
+\end{enumerate}
+
+\subsection{Experimental Setup}
+\label{sec:exp-setup}
+
+This subsection should report the implementation setting, agent prompts, knowledge sources, annotation process, and graph serialization format used in the study.
+The setup should be sufficient for reproducing the requirement structure modeling workflow.
+
+\subsection{Datasets}
+\label{sec:exp-datasets}
+
+The datasets should consist of natural-language requirement documents or requirement statements with sufficient domain context for semantic decomposition.
+For each dataset, the final paper should report the source, domain, number of requirements, annotation protocol, and any exclusion criteria.
+
+\subsection{Baselines}
+\label{sec:exp-baselines}
+
+The evaluation should compare the proposed workflow against focused baselines, such as direct LLM extraction, single-agent parsing, and template-only extraction.
+Baselines should produce the same target representation so that comparison is made at the structure-modeling level.
+
+\subsection{Evaluation Metrics}
+\label{sec:exp-metrics}
+
+\subsubsection{Structure Completeness}
+\label{sec:exp-completeness}
+
+Structure completeness measures whether required element types and relations are present in the generated representation.
+
+\subsubsection{Semantic Consistency}
+\label{sec:exp-consistency}
+
+Semantic consistency measures whether graph elements preserve the meaning of the original requirement text.
+
+\subsubsection{Graph Quality}
+\label{sec:exp-graph-quality}
+
+Graph quality evaluates relation validity, node typing, evidence traceability, and structural coherence.
+
+\subsubsection{Requirement Representation Accuracy}
+\label{sec:exp-accuracy}
+
+Representation accuracy compares generated elements and relations against a human-reviewed reference representation.
+
+\subsection{Main Results}
+\label{sec:exp-main-results}
+
+This subsection should report empirical results for the research questions without introducing unsupported claims.
+Tables should separate element-level and relation-level performance.
+
+\subsection{Ablation Study}
+\label{sec:exp-ablation}
+
+The ablation study should examine the contribution of knowledge guidance, role-separated agents, and human refinement.
+Each ablation should preserve the same input requirements and evaluation metrics.
+
+\subsection{Case Study}
+\label{sec:exp-case-study}
+
+The case study should trace a small set of requirements from raw text to semantic decomposition and final requirement graph.
+It should highlight representation decisions, not downstream engineering tasks.

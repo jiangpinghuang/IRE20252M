@@ -1,0 +1,68 @@
+\section{Experiments}
+\label{experiments}
+
+\subsection{Research Questions}
+The experiments evaluate whether the proposed workflow improves requirement
+conflict detection and consistency verification.
+\begin{itemize}[leftmargin=*]
+  \item \textbf{RQ1:} How accurately does the workflow detect conflicts in natural
+  language requirements?
+  \item \textbf{RQ2:} How much does knowledge-guided analysis improve consistency
+  verification?
+  \item \textbf{RQ3:} How does multi-agent collaboration affect false positives and
+  explanation quality?
+  \item \textbf{RQ4:} To what extent can human-in-the-loop refinement reduce manual
+  verification effort?
+\end{itemize}
+
+\subsection{Experimental Setup}
+The evaluation will compare the proposed workflow with simpler requirement checking
+settings under the same input requirements and annotation criteria. The setup should
+specify agent prompts, knowledge sources, conflict taxonomy, annotation protocol,
+and human verification procedure.
+
+\subsection{Datasets}
+The study will use requirement sets containing manually annotated conflicts and
+non-conflicts. Dataset reporting should include the application domain, number of
+requirements, conflict categories, annotation process, and inter-annotator agreement
+where applicable.
+
+\subsection{Baselines}
+Baselines should be selected to isolate the effect of collaboration and knowledge
+guidance:
+\begin{itemize}[leftmargin=*]
+  \item A single-agent requirement conflict checker.
+  \item A requirement checker without external requirement knowledge.
+  \item A rule-only consistency checker where applicable.
+\end{itemize}
+
+\subsection{Evaluation Metrics}
+
+\subsubsection{Conflict Detection Accuracy}
+Conflict detection accuracy measures whether the workflow correctly distinguishes
+conflicting and non-conflicting requirement cases.
+
+\subsubsection{Consistency Verification Accuracy}
+Consistency verification accuracy measures whether detected conflicts are assigned
+to the correct consistency issue and conflict category.
+
+\subsubsection{False Positive Rate}
+False positive rate measures how often the workflow reports conflicts that human
+annotators consider acceptable or non-conflicting.
+
+\subsubsection{Human Verification Reduction}
+Human verification reduction measures the decrease in manual review effort after
+agent-based filtering, explanation, and refinement.
+
+\subsection{Main Results}
+This subsection will report the main quantitative results once the annotated
+requirement data and baselines are finalized. No synthetic performance numbers are
+introduced in the paper structure.
+
+\subsection{Ablation Study}
+The ablation study should evaluate the contribution of major components, such as
+knowledge guidance, constraint rules, role-separated agents, and human feedback.
+
+\subsection{Case Study}
+The case study should present a small requirement set with a representative conflict,
+the workflow output, the explanation, and the human refinement decision.

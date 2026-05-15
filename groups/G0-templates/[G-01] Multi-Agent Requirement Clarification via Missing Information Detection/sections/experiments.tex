@@ -1,0 +1,47 @@
+\section{Experiments}
+\label{experiments}
+
+\subsection{Research Questions}
+The empirical study evaluates whether the clarification workflow improves elicitation outcomes.
+\begin{enumerate}[label=\textbf{RQ\arabic*:}, leftmargin=*]
+  \item Does multi-agent clarification improve requirement completeness compared with non-iterative elicitation?
+  \item How accurately does missing information detection identify functional, constraint, role, data, and exception gaps?
+  \item How much do knowledge assistance and agent collaboration contribute to clarification effectiveness?
+  \item Does the workflow reduce human effort while preserving stakeholder control?
+\end{enumerate}
+
+\subsection{Experimental Setup}
+The setup compares elicitation sessions that start from the same incomplete natural-language requirements.
+Each session produces clarification questions, stakeholder answers, refined requirements, and an elicitation log for evaluation.
+
+\subsection{Datasets}
+Datasets should consist of requirement elicitation scenarios with incomplete initial descriptions and reference missing-information annotations.
+The dataset description should report domain coverage, scenario size, and annotation procedure without introducing results.
+
+\subsection{Baselines}
+Baselines should remain within requirement elicitation.
+Candidate baselines include single-agent LLM clarification, prompt-only clarification, checklist-based elicitation, and analyst-authored clarification questions.
+
+\subsection{Evaluation Metrics}
+
+\subsubsection{Requirement Completeness}
+Requirement completeness measures the proportion of required elicitation elements captured after clarification.
+
+\subsubsection{Missing Information Coverage}
+Missing information coverage measures how many annotated missing elements are detected and addressed by clarification questions.
+
+\subsubsection{Clarification Effectiveness}
+Clarification effectiveness measures whether generated questions lead to useful stakeholder answers and improved requirement statements.
+
+\subsubsection{Human Effort Reduction}
+Human effort reduction measures the number of clarification turns, manual edits, or reviewer interventions needed to reach an acceptable requirement.
+
+\subsection{Main Results}
+This subsection should report aggregate comparisons after experiments are completed.
+No numerical claims or result tables are included before empirical execution.
+
+\subsection{Ablation Study}
+The ablation study should remove or vary major workflow components, including missing-information detection, requirement knowledge, agent collaboration, and human validation.
+
+\subsection{Case Study}
+The case study should present one requirement elicitation scenario, the detected missing information, the generated clarification questions, and the final clarified requirement statements.

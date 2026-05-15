@@ -1,0 +1,38 @@
+\section{Introduction}
+\label{introduction}
+
+\subsection{Background and Motivation}
+\label{sec:intro-background}
+
+Requirements are the primary interface between stakeholder intent and downstream software engineering activities.
+Recent work has emphasized the central role of requirements in AI-driven software engineering~\cite{robinsonRequirementsAreAll2025}.
+However, natural-language requirements remain difficult to analyze because their structure is implicit, their semantics are mixed, and their domain assumptions are often left unstated.
+
+\subsection{Challenges of Requirement Structure Modeling}
+\label{sec:intro-challenges}
+
+This paper focuses on requirement structure modeling rather than on later development activities.
+We identify four core challenges:
+\begin{enumerate}[leftmargin=*]
+  \item Natural-language requirements mix functions, constraints, roles, data elements, and exception conditions in the same text.
+  \item Requirement semantics are ambiguous when stakeholder vocabulary, system behavior, and operational conditions are not explicitly separated.
+  \item Existing LLM-based requirement analysis often produces fluent text but lacks a stable structured representation.
+  \item Requirement representations must remain inspectable and refinable by humans to support practical requirements engineering.
+\end{enumerate}
+
+\subsection{Multi-Agent Requirement Parsing}
+\label{sec:intro-multi-agent}
+
+We study a lightweight multi-agent parsing workflow in which different agents focus on elicitation, semantic analysis, and structure construction.
+The goal is not to build a large agent platform, but to examine whether role-separated collaboration can improve the transformation from informal requirements to a structured requirement graph.
+
+\subsection{Contributions}
+\label{sec:intro-contributions}
+
+The intended contributions of this paper are:
+\begin{enumerate}[leftmargin=*]
+  \item A research formulation of knowledge-guided requirement structure modeling for natural-language requirements.
+  \item A multi-agent workflow for requirement semantic decomposition and structured representation construction.
+  \item A requirement graph representation that organizes functional requirements, constraints, roles, data elements, and exception information.
+  \item An evaluation design focused on structure completeness, semantic consistency, graph quality, and representation accuracy.
+\end{enumerate}

@@ -1,0 +1,30 @@
+\section{Introduction}
+\label{introduction}
+
+\subsection{Background and Motivation}
+\label{subsec:intro-background}
+Requirements are the main medium through which stakeholders express intent, constraints, and acceptable system behavior. Recent work has argued that requirements are becoming a central interface for intelligent software engineering~\cite{robinsonRequirementsAreAll2025}, while requirement specification remains difficult because ambiguity, missing constraints, and domain vocabulary must still be handled in a stakeholder-readable form~\cite{darifControlledNaturalLanguage2026}. Large language models can draft requirements rapidly, but automatic drafting alone does not give users enough control over how requirements are revised.
+
+\subsection{Challenges of Interactive Requirement Refinement}
+\label{subsec:intro-challenges}
+This paper focuses on the refinement stage after an initial requirement draft is available. The key challenges are:
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Limited controllability:} users often cannot precisely steer which parts of a requirement should be preserved, changed, constrained, or removed.
+  \item \textbf{Weak feedback integration:} user comments are frequently treated as one-shot prompts instead of structured refinement signals.
+  \item \textbf{Opaque evolution:} the rationale behind requirement revisions is often not visible to stakeholders.
+  \item \textbf{Insufficient interaction:} requirement improvement requires clarification and negotiation, not only automatic generation.
+\end{itemize}
+
+\subsection{Human-in-the-Loop Requirement Optimization}
+\label{subsec:intro-hitl}
+We study a human-in-the-loop multi-agent workflow for interactive requirement refinement. The workflow uses specialized agents to elicit clarification, analyze requirement quality, and review revisions, while human feedback remains the controlling signal for iterative optimization. Knowledge-assisted refinement is used to support revision templates, feedback patterns, and prompt strategies while keeping the scope limited to requirement refinement.
+
+\subsection{Contributions}
+\label{subsec:intro-contributions}
+The paper is organized around the following contributions:
+\begin{itemize}[leftmargin=*]
+  \item We formulate human-in-the-loop requirement refinement as a controllability problem in intelligent requirements engineering.
+  \item We design a lightweight multi-agent interactive workflow for requirement revision, constraint adjustment, and feedback integration.
+  \item We introduce knowledge-assisted refinement mechanisms that guide iterative requirement optimization.
+  \item We define an evaluation plan centered on requirement quality, controllability, refinement effectiveness, user satisfaction, and human effort.
+\end{itemize}

@@ -1,0 +1,77 @@
+\section{Experiments}
+\label{experiments}
+
+The experiment section evaluates whether the proposed workflow improves environment-aware requirement elicitation.
+No result values are reported in this draft structure.
+
+\subsection{Research Questions}
+\label{exp:rqs}
+
+\begin{itemize}[leftmargin=*]
+  \item \textbf{RQ1:} Does the workflow improve requirement context completeness?
+  \item \textbf{RQ2:} Does knowledge-assisted analysis improve environment consistency?
+  \item \textbf{RQ3:} Do dynamic clarification questions help stakeholders complete missing environmental information?
+  \item \textbf{RQ4:} What is the contribution of each agent role and knowledge component?
+\end{itemize}
+
+\subsection{Experimental Setup}
+\label{exp:setup}
+
+This subsection will describe the elicitation tasks, participant or annotator protocol, model configuration, prompt setting, and evaluation procedure.
+The setup should focus on environment-aware elicitation rather than general text generation quality.
+
+\subsection{Datasets}
+\label{exp:datasets}
+
+The dataset should consist of natural language requirement descriptions with missing or underspecified environmental context.
+Candidate sources may include course project requirements, curated requirement scenarios, and manually designed environment-sensitive cases.
+
+\subsection{Baselines}
+\label{exp:baselines}
+
+Baselines should be simple and directly comparable:
+\begin{itemize}[leftmargin=*]
+  \item original requirements without environment-aware elicitation;
+  \item single-agent requirement clarification;
+  \item multi-agent workflow without environment knowledge;
+  \item workflow without human clarification, if applicable.
+\end{itemize}
+
+\subsection{Evaluation Metrics}
+\label{exp:metrics}
+
+\subsubsection{Context Completeness}
+\label{exp:context_completeness}
+
+Measures whether deployment, device, runtime, and user-context information is sufficiently specified.
+
+\subsubsection{Environment Consistency}
+\label{exp:environment_consistency}
+
+Measures whether elicited environmental assumptions are mutually consistent and aligned with the scenario.
+
+\subsubsection{Requirement Completeness}
+\label{exp:requirement_completeness}
+
+Measures whether the resulting requirements contain enough information for environment-aware analysis.
+
+\subsubsection{Clarification Effectiveness}
+\label{exp:clarification_effectiveness}
+
+Measures whether generated clarification questions help stakeholders provide missing environmental information.
+
+\subsection{Main Results}
+\label{exp:main_results}
+
+This subsection will report quantitative and qualitative findings for the research questions after experiments are conducted.
+Tables should distinguish confirmed results from illustrative examples.
+
+\subsection{Ablation Study}
+\label{exp:ablation}
+
+The ablation study will compare the full workflow against variants without selected agent roles, knowledge assistance, or human clarification.
+
+\subsection{Case Study}
+\label{exp:case_study}
+
+The case study will trace one requirement from its initial underspecified form through environment detection, clarification, and context-enriched requirement output.

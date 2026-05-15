@@ -1,0 +1,50 @@
+\section{Introduction}
+\label{introduction}
+
+\subsection{Background and Motivation}
+Requirement consistency is a central quality concern in requirements engineering.
+Natural language requirements are readable for stakeholders, but they can also encode
+semantic conflicts, logical contradictions, incompatible constraints, and conflicting
+role expectations. These problems are especially costly when inconsistent
+requirements are propagated into design, implementation, and testing.
+
+Recent work has emphasized requirements as a primary interface for AI-assisted
+software engineering~\cite{robinsonRequirementsAreAll2025,hanArchCodeIncorporatingSoftware2024}.
+At the same time, controlled natural language research shows that reducing ambiguity
+while preserving stakeholder readability remains difficult~\cite{darifControlledNaturalLanguage2026}.
+This motivates a focused study of requirement consistency verification for natural
+language requirements.
+
+\subsection{Challenges of Requirement Conflict Detection}
+Requirement conflicts are rarely limited to explicit textual contradictions.
+They may appear as implicit incompatibilities between constraints, mismatches between
+user roles and permissions, inconsistent temporal ordering, or semantic conflicts
+across requirements written in different styles.
+
+This paper focuses on the following research problem:
+\begin{quote}
+How can multi-agent collaboration and knowledge-guided consistency analysis support
+dynamic detection, explanation, and refinement of conflicts in natural language
+requirements?
+\end{quote}
+
+\subsection{Multi-Agent Requirement Verification}
+A single analyzer may miss conflicts that require different reasoning perspectives.
+We therefore organize requirement verification as a lightweight collaboration among
+analysis, validation, and review roles. The goal is not to build a large agent
+platform, but to structure conflict detection as a repeatable workflow that checks
+requirement statements against domain knowledge, constraint rules, and stakeholder
+feedback.
+
+\subsection{Contributions}
+This paper is organized around the following contributions:
+\begin{itemize}[leftmargin=*]
+  \item A research problem formulation for multi-agent requirement conflict detection
+  via knowledge-guided consistency analysis.
+  \item A focused workflow for identifying functional, constraint, role, and temporal
+  conflicts in natural language requirements.
+  \item A knowledge-guided verification method that combines requirement knowledge,
+  constraint rules, semantic patterns, and prompt strategies.
+  \item An experimental plan for evaluating conflict detection effectiveness,
+  consistency verification accuracy, false positives, and human verification effort.
+\end{itemize}

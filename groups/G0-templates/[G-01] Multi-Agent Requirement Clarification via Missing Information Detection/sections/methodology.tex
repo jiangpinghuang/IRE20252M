@@ -1,0 +1,55 @@
+\section{Methodology}
+\label{methodology}
+
+\subsection{Framework Overview}
+The framework takes an incomplete natural-language requirement as input and produces a clarified requirement statement with its elicitation record.
+It follows a lightweight loop: detect missing information, assign clarification responsibilities to agents, ask knowledge-guided follow-up questions, and let humans validate the refined requirement.
+The scope is limited to requirement elicitation.
+
+\subsection{Multi-Agent Requirement Clarification Workflow}
+The clarification workflow uses three complementary agents.
+
+\subsubsection{Interviewer Agent}
+The interviewer agent manages the elicitation dialogue.
+It asks concise follow-up questions, adapts the question order based on stakeholder responses, and avoids unrelated prompts.
+
+\subsubsection{End-User Agent}
+The end-user agent represents usage perspectives during clarification.
+It helps expose user goals, operational contexts, expected interactions, and practical constraints that may be absent from the original requirement.
+
+\subsubsection{Analyst Agent}
+The analyst agent reviews the evolving requirement statement.
+It checks whether the current version contains sufficient actor, action, object, condition, constraint, data, and exception information for elicitation.
+
+\subsection{Missing Information Detection}
+Missing information detection identifies which requirement elements must be clarified before the requirement can be considered complete for the elicitation task.
+
+\subsubsection{Functional Information}
+Functional information covers actors, goals, actions, inputs, outputs, triggers, and expected system responses.
+
+\subsubsection{Constraint Information}
+Constraint information covers business rules, quality constraints, timing limits, access restrictions, and usage conditions.
+
+\subsubsection{Role, Data, and Exception Information}
+Role, data, and exception information is treated as high priority because these gaps often determine whether stakeholders interpret a requirement consistently.
+
+\subsection{Knowledge-Assisted Clarification}
+Knowledge assists the agents in selecting what to ask and how to ask it.
+
+\subsubsection{Requirement Knowledge}
+Requirement knowledge includes domain terms, stakeholder roles, requirement slots, constraint categories, and elicitation checklists.
+
+\subsubsection{Clarification Templates}
+Clarification templates map missing information types to targeted follow-up questions.
+For example, a missing actor triggers a role question, while a missing exception triggers an alternative-flow question.
+
+\subsubsection{Prompt Strategies}
+Prompt strategies constrain agents to ask one focused question at a time, justify the missing information type, and avoid introducing requirements not supported by stakeholder input.
+
+\subsection{Human-in-the-Loop Interaction}
+Human participants validate clarification questions, provide answers, and approve revised requirement statements.
+The workflow preserves human control over requirement meaning while using agents to reduce missed clarification opportunities.
+
+\subsection{Iterative Requirement Refinement}
+The workflow repeats until the remaining missing information is resolved or explicitly marked as unknown by the stakeholder.
+Each iteration updates the current requirement statement and records the question-answer pair that motivated the refinement.

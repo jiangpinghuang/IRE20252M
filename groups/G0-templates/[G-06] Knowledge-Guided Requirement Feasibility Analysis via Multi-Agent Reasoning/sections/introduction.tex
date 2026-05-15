@@ -1,0 +1,33 @@
+\section{Introduction}
+\label{introduction}
+
+\subsection{Background and Motivation}
+\label{intro:background}
+
+Requirements determine what a software project is expected to deliver, but natural language requirements frequently include goals that are unrealistic under available resources, deployment environments, performance budgets, or organizational constraints.
+Recent work has highlighted the central role of requirements in AI-driven software engineering~\cite{robinsonRequirementsAreAll2025} and the need to reduce ambiguity while preserving stakeholder readability in requirement specification~\cite{darifControlledNaturalLanguage2026}.
+This paper focuses on \emph{requirement feasibility}: whether a stated requirement is realistic, implementable, and deployable under explicit or implicit constraints.
+
+\subsection{Challenges of Requirement Feasibility Analysis}
+\label{intro:challenges}
+
+Feasibility analysis is difficult because many infeasible requirements are not syntactically invalid.
+They may look precise while hiding resource limits, temporal assumptions, hardware dependencies, data availability assumptions, or deployment restrictions.
+LLM-based requirement generation can amplify this issue by producing fluent but unrealistic requirements whose feasibility has not been checked against project knowledge.
+
+\subsection{Multi-Agent Requirement Verification}
+\label{intro:multi_agent}
+
+We study a lightweight multi-agent verification workflow in which agents play complementary analysis roles: requirement interpretation, constraint verification, and resource/deployment feasibility checking.
+The goal is not to build a large platform, but to decompose feasibility verification into focused reasoning steps that can be inspected and corrected by humans.
+
+\subsection{Contributions}
+\label{intro:contributions}
+
+This paper makes the following planned contributions:
+\begin{itemize}[leftmargin=*]
+  \item A problem formulation for knowledge-guided requirement feasibility analysis and requirement realism verification.
+  \item A multi-agent workflow for identifying unrealistic requirements, infeasible constraints, and missing feasibility assumptions.
+  \item A constraint reasoning scheme covering resource, performance, deployment, and temporal feasibility.
+  \item An experimental design for evaluating feasibility detection accuracy, constraint verification accuracy, unrealistic requirement detection, and human verification reduction.
+\end{itemize}

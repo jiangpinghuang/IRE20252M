@@ -1,0 +1,86 @@
+\section{Methodology}
+\label{methodology}
+
+\subsection{Framework Overview}
+\label{subsec:method-overview}
+The framework refines a draft requirement through repeated user-agent interaction and a lightweight requirement knowledge base. It takes a user goal or draft as input and produces an evolved requirement version with feedback, rationale, and open issues.
+
+\subsection{Multi-Agent Interactive Workflow}
+\label{subsec:method-workflow}
+The workflow is intentionally small and task-oriented. Each agent has a bounded role so that the human user can understand and control the refinement process.
+
+\subsubsection{Interviewer Agent}
+\label{subsubsec:method-interviewer}
+The Interviewer Agent asks clarification questions when user intent, domain context, priority, or constraints are underspecified.
+
+\subsubsection{Analyst Agent}
+\label{subsubsec:method-analyst}
+The Analyst Agent identifies ambiguity, missing conditions, vague quality attributes, and refinement opportunities in the current requirement version.
+
+\subsubsection{Reviewer Agent}
+\label{subsubsec:method-reviewer}
+The Reviewer Agent checks whether a proposed revision follows the user's feedback and whether it preserves the intended requirement meaning.
+
+\subsubsection{Human Feedback Loop}
+\label{subsubsec:method-feedback-loop}
+The human user can accept, reject, edit, or redirect revisions. Feedback is stored as a refinement signal and used in later iterations.
+
+\subsection{Requirement Refinement Process}
+\label{subsec:method-refinement}
+The refinement process is modeled as an iterative cycle rather than a one-shot generation step.
+
+\subsubsection{Requirement Revision}
+\label{subsubsec:method-revision}
+Requirement text is revised to improve clarity, completeness, testability, and stakeholder readability while keeping the user's intent explicit.
+
+\subsubsection{Constraint Adjustment}
+\label{subsubsec:method-constraint}
+Functional constraints, quality constraints, scope boundaries, and priorities can be added, relaxed, or narrowed according to user feedback.
+
+\subsubsection{User Feedback Integration}
+\label{subsubsec:method-feedback-integration}
+User comments are normalized into refinement actions such as clarify, specialize, generalize, preserve, remove, or reprioritize.
+
+\subsubsection{Requirement Evolution}
+\label{subsubsec:method-evolution}
+Each iteration records the requirement version, user feedback, agent suggestion, accepted revision, and rationale for change.
+
+\subsection{Knowledge-Assisted Requirement Optimization}
+\label{subsec:method-knowledge}
+Knowledge assistance supports refinement without replacing user judgment. It provides reusable guidance for common requirement improvement patterns.
+
+\subsubsection{Requirement Knowledge}
+\label{subsubsec:method-requirement-knowledge}
+Requirement knowledge includes domain terminology, requirement quality criteria, common ambiguity patterns, and stakeholder constraints.
+
+\subsubsection{Refinement Templates}
+\label{subsubsec:method-templates}
+Refinement templates guide recurring edits such as adding actors, conditions, acceptance criteria, priority, and measurable quality attributes.
+
+\subsubsection{Feedback Patterns}
+\label{subsubsec:method-feedback-patterns}
+Feedback patterns map user instructions to concrete refinement operations, making the revision process more transparent and repeatable.
+
+\subsubsection{Prompt Strategies}
+\label{subsubsec:method-prompts}
+Prompt strategies constrain agent behavior to ask targeted questions, preserve user intent, and explain revision rationale.
+
+\subsection{Human-in-the-Loop Interaction}
+\label{subsec:method-hitl}
+Human participation is treated as a first-class part of the method.
+
+\subsubsection{User Intervention}
+\label{subsubsec:method-intervention}
+Users can intervene when an agent misunderstands intent, over-refines a requirement, ignores constraints, or changes requirement scope.
+
+\subsubsection{Interactive Clarification}
+\label{subsubsec:method-clarification}
+The system asks clarification questions only when the missing information affects refinement decisions.
+
+\subsubsection{Iterative Feedback}
+\label{subsubsec:method-iterative-feedback}
+Feedback from earlier iterations is reused to keep later revisions consistent with stakeholder preferences.
+
+\subsection{Requirement Controllability}
+\label{subsec:method-controllability}
+Requirement controllability refers to the user's ability to steer what changes, why it changes, and how the revised requirement evolves over iterations. We operationalize controllability through edit control, constraint control, rationale visibility, version comparison, and feedback traceability.
